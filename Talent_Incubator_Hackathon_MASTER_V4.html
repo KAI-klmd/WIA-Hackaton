@@ -1,0 +1,1438 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Hackathon Master · Prototype v2 aligned" name="artifact-version"/>
+<meta content="proposals" name="glean-artifact-type"/>
+<meta content="visual_content" name="glean-artifact-type"/>
+<title>Talent Incubator — Hackathon Master · Prototype v2 Aligned</title>
+<style>
+:root{
+ --bg:#f4f8fd;--surface:#ffffff;--ink:#132b47;--text:#48637e;--muted:#7890a7;
+ --blue:#0878d1;--blue2:#4bb4e6;--navy:#103a68;--teal:#13a8a2;--violet:#7565e8;
+ --amber:#f4ad42;--pink:#e96f9b;--green:#21af7b;--line:#dce8f3;
+ --soft-blue:#eef7ff;--soft-teal:#edfafa;--soft-violet:#f3f1ff;--soft-amber:#fff8eb;--soft-pink:#fff2f6;--soft-green:#eefaf5;
+ --shadow:0 18px 44px rgba(45,81,121,.09);--shadow-sm:0 8px 24px rgba(45,81,121,.07);
+ --max:1420px;
+ /* legacy aliases used by embedded SVG */
+ --artifact-background:#fff;--artifact-text-primary:#132b47;--artifact-text-secondary:#58728d;--artifact-primary-brand:#0878d1;
+ --artifact-brand-deep:#103a68;--artifact-on-brand:#fff;--artifact-violet:#7565e8;--artifact-amber:#f4ad42;--artifact-teal:#13a8a2;
+ --artifact-rose:#e96f9b;--artifact-positive:#21af7b;--artifact-surface-blue:#eef7ff;--artifact-surface-violet:#f3f1ff;
+ --artifact-surface-amber:#fff8eb;--artifact-surface-teal:#edfafa;--artifact-surface-rose:#fff2f6;--artifact-surface-green:#eefaf5;
+ --artifact-border-blue:#cfe4f8;--artifact-border-violet:#ddd7fb;--artifact-border-amber:#f6dfb6;--artifact-border-teal:#ccebe8;
+ --artifact-border-rose:#f2d5df;--artifact-border-neutral:#dce8f3;--artifact-tip-bg:#103a68;--artifact-tip-text:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px;background:var(--bg)}
+body{margin:0;background:linear-gradient(180deg,#f8fbff 0%,#f3f8fe 48%,#f8fbff 100%);color:var(--ink);font-family:Aptos,"Aptos",Calibri,"Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit} p{margin:0 0 16px} strong{font-weight:800;color:#173b60} em{font-style:normal} h1,h2,h3{font-family:"Aptos Display",Aptos,"Segoe UI",system-ui,sans-serif;text-wrap:balance;margin-top:0;color:#122b49} ul{margin-top:10px}
+.wrap{width:min(calc(100% - 36px),var(--max));margin:0 auto;padding:0}
+body>.wrap{padding:24px 0 56px}
+
+/* menu */
+nav.toc{position:sticky;top:8px;z-index:300;padding:0;background:transparent;border:0}
+nav.toc .inner{width:min(calc(100vw - 28px),var(--max));max-width:var(--max);margin:0 auto;display:flex;gap:6px;align-items:center;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;padding:8px 10px;background:rgba(255,255,255,.94);border:1px solid rgba(206,220,235,.95);border-radius:20px;box-shadow:0 14px 32px rgba(46,78,114,.11);backdrop-filter:blur(16px)}
+nav.toc .inner::-webkit-scrollbar{display:none}
+nav.toc a{flex:0 0 auto;text-decoration:none;font-size:10.5px;line-height:1;font-weight:900;letter-spacing:.055em;text-transform:uppercase;color:#637a91;padding:10px 12px;border-radius:12px;white-space:nowrap;transition:.18s ease}
+nav.toc a:hover{color:var(--blue);background:var(--soft-blue)}
+nav.toc a[aria-current="true"]{color:#fff;background:linear-gradient(135deg,var(--blue),var(--teal));box-shadow:0 7px 18px rgba(8,120,209,.22)}
+
+/* hero */
+header.cover{margin-top:18px;padding:clamp(38px,5vw,72px);border-radius:34px;background:linear-gradient(140deg,#fff 0%,#f2f9ff 58%,#f1fbfa 100%);border:1px solid #e2edf7;box-shadow:var(--shadow);overflow:hidden}
+.hero-top{display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:30px}.eyebrow{font-size:11px;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:#6c8298;margin:0}.hero-badge{font-size:10.5px;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--violet);background:var(--soft-violet);border:1px solid #e1dcfa;padding:8px 12px;border-radius:999px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);gap:clamp(36px,5vw,74px);align-items:center}.hero-left{min-width:0}.hero-left h1{font-size:clamp(62px,7.2vw,106px);line-height:.86;letter-spacing:-.07em;font-weight:300;margin:0 0 26px;max-width:100%}.hero-left h1 span{display:block;margin-left:clamp(10px,2.8vw,40px);background:linear-gradient(90deg,var(--blue),var(--teal));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}.strap{font-size:clamp(27px,2.5vw,40px);line-height:1.05;font-weight:800;letter-spacing:-.035em;max-width:18ch;margin:0 0 20px}.hero-explain{font-size:19px;line-height:1.65;color:var(--text);max-width:64ch}.hero-right{padding:28px 30px;border-radius:24px;background:#fff;border:1px solid #e4edf6;box-shadow:var(--shadow-sm)}.pay-twice-kicker{font-size:10.5px;font-weight:900;letter-spacing:.14em;color:var(--pink);margin-bottom:8px}.pay-twice-title{display:flex;gap:12px;align-items:baseline;font-size:clamp(28px,2.5vw,38px);font-weight:800}.big-two{font-size:clamp(56px,5vw,78px);font-weight:300;color:var(--pink);line-height:.9}.pay-twice-lines{display:grid;gap:14px;margin-top:18px}.pay-twice-lines>div{display:grid;grid-template-columns:10px 1fr;column-gap:11px}.loss-mark{width:8px;height:8px;margin-top:9px;border-radius:50%;background:var(--pink);grid-row:1/3}.pay-twice-lines strong{font-size:18px}.pay-twice-lines small{display:block;font-size:14px;color:var(--text);margin-top:2px}
+.hero-journey{display:flex;gap:9px;overflow-x:auto;margin-top:34px;padding:10px;border-radius:22px;background:linear-gradient(135deg,#113d6b,#0f5d7b);scrollbar-width:none}.hero-journey::-webkit-scrollbar{display:none}.journey-step{flex:1 0 150px;min-width:150px;padding:14px;border-radius:15px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.08)}.journey-num{display:block;font-size:10px;font-weight:900;letter-spacing:.13em;color:#8dd4ff;margin-bottom:5px}.journey-step strong{display:block;color:#fff;font-size:15px;line-height:1.18}.journey-step small{display:block;color:rgba(255,255,255,.68);font-size:12px;margin-top:4px}.journey-step.live{background:rgba(19,168,162,.23)}.journey-step.outcome{background:rgba(33,175,123,.22)}.journey-arrow{display:none}.hero-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}.metric{padding:18px 20px;border-radius:18px;background:#fff;border:1px solid #e4edf6;box-shadow:var(--shadow-sm)}.metric .v{font-size:clamp(30px,2.8vw,44px);line-height:1;font-weight:400;letter-spacing:-.04em;color:var(--navy)}.metric:nth-child(2) .v{color:var(--green)}.metric:nth-child(3) .v{color:var(--violet)}.metric:nth-child(4) .v{color:var(--teal)}.metric .l{font-size:12.5px;color:var(--text);line-height:1.35;margin-top:7px}.hero-caveat{font-size:11.5px;color:var(--muted);margin:10px 2px 0}
+
+/* section structure: block flow only, no overlap */
+body>.wrap>section{position:relative;display:block!important;margin-top:26px;padding:30px 30px 32px!important;border-radius:28px;background:rgba(255,255,255,.74);border:1px solid rgba(222,233,244,.96);box-shadow:0 10px 30px rgba(55,91,128,.055);scroll-margin-top:92px;overflow:visible!important}
+.section-intro{display:grid;grid-template-columns:minmax(280px,.38fr) minmax(0,.62fr);gap:clamp(34px,5vw,72px);align-items:start;margin-bottom:18px}.section-intro>.rail{min-width:0}.section-intro>.body,.section-intro>.sub,.section-intro>.intro-copy{min-width:0;align-self:start}.rail{position:static!important;display:block!important;width:auto!important;max-width:none!important;margin:0!important;padding:0!important}.rail .tag{margin-bottom:14px}.rail h2{font-size:clamp(40px,3.9vw,62px);line-height:.98;letter-spacing:-.05em;font-weight:720;margin:0;color:#132d4c;max-width:10ch}.crit{margin:16px 0 0;font-size:10px;line-height:1.5;letter-spacing:.13em;text-transform:uppercase;color:#879cb0}.anchor{display:none}.tag{display:inline-block;padding:8px 12px;border-radius:999px;background:var(--soft-blue);color:var(--blue);font-size:10.5px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.tag.rose{background:var(--soft-pink);color:var(--pink)}.tag.teal{background:var(--soft-teal);color:var(--teal)}.tag.violet{background:var(--soft-violet);color:var(--violet)}.tag.amber{background:var(--soft-amber);color:#c78318}.tag.green{background:var(--soft-green);color:var(--green)}
+.body p,.sub,.intro-copy p{font-size:18px;line-height:1.72;color:var(--text);max-width:78ch}.lede{font-size:20px!important;line-height:1.62!important;color:#294866!important}.body p strong,.sub strong,.intro-copy strong{color:#163b60;font-weight:850}.hl{background:linear-gradient(transparent 62%,rgba(19,168,162,.18) 62%);padding:0 .04em}.hl-blue{background:linear-gradient(transparent 62%,rgba(8,120,209,.16) 62%);padding:0 .04em}
+body>.wrap>section>*:not(.section-intro){width:100%;max-width:100%;min-width:0}.ghead{margin:18px 0 10px;font-size:10.5px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#6d8499}.gnote{display:block;font-size:13px;letter-spacing:0;text-transform:none;font-weight:500;color:#8a9bad;margin-top:4px}
+
+/* generic components */
+.grid{display:grid;gap:16px}.g2{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(3,minmax(0,1fr))}.g4{grid-template-columns:repeat(4,minmax(0,1fr))}.card,.step,.kpi,.ux-strip,.bridge-item,.roleworld-side,.cost-node{min-width:0;background:#fff;border:1px solid #e2ecf5;border-radius:20px;box-shadow:var(--shadow-sm)}.card{padding:22px 22px 20px}.card .k,.step .n{font-size:10px;font-weight:900;letter-spacing:.13em;text-transform:uppercase;color:#7089a1;margin-bottom:8px}.card h3,.step h3,.bridge-copy h3,.roleworld-side h3,.roleworld-core h3{font-size:clamp(23px,1.8vw,32px);line-height:1.08;letter-spacing:-.03em;margin:0 0 9px;color:#16304f}.card p,.step p,.bridge-copy p,.roleworld-side p,.roleworld-core p{font-size:15.5px;line-height:1.58;color:var(--text);margin:0}.card.blue{border-top:4px solid var(--blue)}.card.teal{border-top:4px solid var(--teal)}.card.violet{border-top:4px solid var(--violet)}.card.amber{border-top:4px solid var(--amber)}.card.rose{border-top:4px solid var(--pink)}.card.green{border-top:4px solid var(--green)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.step{padding:20px}.step.s1{background:linear-gradient(180deg,#fff,var(--soft-violet))}.step.s2{background:linear-gradient(180deg,#fff,var(--soft-amber))}.step.s3{background:linear-gradient(180deg,#fff,var(--soft-teal))}.step.s4{background:linear-gradient(180deg,#fff,var(--soft-blue))}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.kpi{padding:20px}.kpi .v{font-size:clamp(28px,2.5vw,40px);line-height:1;font-weight:430;letter-spacing:-.04em;color:var(--blue)}.kpi.green .v{color:var(--green)}.kpi.violet .v{color:var(--violet)}.kpi.teal .v{color:var(--teal)}.kpi .l{font-size:12.5px;line-height:1.35;color:var(--text);margin-top:7px}
+.band{padding:26px 28px;border-radius:24px;background:linear-gradient(135deg,#133e6c,#0e71a0 55%,#14a7a4);color:#fff;box-shadow:var(--shadow)}.band .kick{font-size:10px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.68)}.band .big{font-size:clamp(28px,2.4vw,40px);line-height:1.08;letter-spacing:-.04em;margin:9px 0 10px;color:#fff}.band .small{font-size:16px;line-height:1.58;color:rgba(255,255,255,.86)}
+.t-scroll{overflow-x:auto;border-radius:20px;background:#fff;border:1px solid #e2ecf5;box-shadow:var(--shadow-sm);margin-top:12px}.t-scroll table{min-width:760px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:13px 15px;border-bottom:1px solid #e6edf5;vertical-align:top;text-align:left}th{font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:#6a8298;background:#f7faff}td{font-size:14.5px;line-height:1.55;color:#37546f}tbody tr:nth-child(even){background:#fbfdff}.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}tr.total td{font-weight:850;color:#163b60;background:#f1f7fd;border-top:2px solid #b9d8ef}.mono{font-size:10.5px;font-weight:900;letter-spacing:.08em;color:var(--blue)}
+.tip{display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;margin-left:5px;background:var(--soft-blue);color:var(--blue);font-size:10px;position:relative;cursor:help}.tiptext{display:none;position:absolute;z-index:500;left:50%;bottom:130%;transform:translateX(-50%);width:min(320px,72vw);padding:10px 12px;border-radius:12px;background:#103a68;color:#fff;font-size:12px;line-height:1.45;text-align:left;box-shadow:0 14px 28px rgba(16,58,104,.25)}.tip:hover .tiptext,.tip:focus .tiptext{display:block}
+
+/* solution pipeline */
+.capability-pipeline{padding:28px;border-radius:28px;background:linear-gradient(135deg,#0d72c6,#0c5eaa 45%,#16a5a2);color:#fff;box-shadow:var(--shadow);margin-top:12px}.pipeline-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:16px}.pipeline-eyebrow{font-size:10px;font-weight:900;letter-spacing:.14em;color:#a9ddff}.pipeline-head h3{font-size:clamp(28px,2.5vw,40px);line-height:1.07;color:#fff;margin:5px 0 0}.pipeline-head p{max-width:34ch;margin:0;color:rgba(255,255,255,.78);font-size:14px}.phase-lane{display:grid;grid-template-columns:190px minmax(0,1fr);gap:14px;padding:13px 0;border-top:1px solid rgba(255,255,255,.15)}.phase-label{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.11)}.phase-label span{display:block;font-size:9.5px;font-weight:900;letter-spacing:.14em;color:rgba(255,255,255,.68)}.phase-label strong{display:block;font-size:21px;color:#fff;margin-top:2px}.phase-label small{display:block;font-size:11.5px;color:rgba(255,255,255,.72);margin-top:4px}.phase-content{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.phase-content.two{grid-template-columns:repeat(2,minmax(0,1fr))}.phase-content.one{grid-template-columns:1fr}.phase-step{display:grid;grid-template-columns:38px minmax(0,1fr);gap:10px;padding:15px 16px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.08)}.phase-step b{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.14);font-size:10px;color:#fff}.phase-step strong{display:block;color:#fff;font-size:14.5px;line-height:1.22}.phase-step small{display:block;color:rgba(255,255,255,.70);font-size:12px;line-height:1.4;margin-top:4px}.phase-step.live{background:rgba(33,175,123,.22)}.phase-step.final{background:rgba(244,173,66,.20)}.pipeline-note{margin:18px 0 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.17);color:rgba(255,255,255,.83);font-size:15px}.pipeline-note strong{color:#fff}
+.solution-story{display:grid;gap:8px;margin-top:12px}.story-row{display:grid;grid-template-columns:58px minmax(240px,.75fr) minmax(0,1.25fr);gap:18px;align-items:start;padding:18px 18px;border-radius:18px;background:#fff;border:1px solid #e3ecf5}.story-row.accent{background:linear-gradient(90deg,var(--soft-teal),var(--soft-blue))}.story-index{font-size:34px;line-height:1;font-weight:320;color:#bfd0df}.story-title span{font-size:9.5px;font-weight:900;letter-spacing:.13em;color:var(--blue)}.story-row.accent .story-title span{color:var(--teal)}.story-title h3{font-size:22px;margin:4px 0 0}.story-row>p{font-size:15px;line-height:1.55;color:var(--text);margin:0}
+
+/* simulation */
+.sim-core-panel{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;padding:20px 22px;border-radius:22px;background:linear-gradient(135deg,var(--soft-violet),var(--soft-blue));border:1px solid #e2e2fa;margin-top:12px}.sim-core-copy h3{font-size:clamp(28px,2.3vw,40px);line-height:1.08;margin:7px 0 8px}.overline{font-size:9.5px;font-weight:900;letter-spacing:.15em;color:var(--violet)}.sim-core-copy p{font-size:16px;line-height:1.62;color:var(--text);margin:0}.sim-core-points{display:grid;gap:9px}.sim-core-points>div{padding:14px 15px;border-radius:16px;background:#fff;border:1px solid #e3ecf5}.sim-core-points b{display:block;color:#173b60;font-size:14.5px;margin-bottom:2px}.sim-core-points span{display:block;color:var(--text);font-size:13.5px;line-height:1.42}.roleworld-layout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(300px,.82fr);gap:14px;margin-top:12px}.roleworld-core{grid-row:1/4;padding:28px;border-radius:22px;background:linear-gradient(135deg,var(--soft-violet),var(--soft-teal));border:1px solid #e3e8f5}.roleworld-core h3{font-size:clamp(36px,3vw,50px);max-width:13ch}.roleworld-side{padding:20px 22px}.roleworld-side span,.core-label{font-size:9.5px;font-weight:900;letter-spacing:.13em;color:var(--violet);text-transform:uppercase}.roleworld-side h3{font-size:21px}.experience-bridge{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:12px}.bridge-spine{display:none}.bridge-item{display:flex;gap:12px;align-items:flex-start;padding:18px}.bridge-item.left,.bridge-item.right{grid-column:auto!important;grid-row:auto!important}.bridge-item::before,.bridge-item::after{display:none!important}.bridge-dot{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;color:#fff;background:linear-gradient(135deg,var(--blue),var(--violet));font-weight:900}.bridge-item.live .bridge-dot{background:linear-gradient(135deg,var(--teal),var(--green))}.bridge-copy span{font-size:9.5px;font-weight:900;letter-spacing:.12em;color:#7089a1}.bridge-copy h3{font-size:21px}.bridge-copy p{font-size:14px}
+
+/* impact */
+#impact{background:linear-gradient(135deg,#f2f9ff,#f0fbfa)}#impact .section-intro{align-items:center}#impact .rail h2{font-size:clamp(44px,4.2vw,66px)}#impact .grid{margin-top:8px}.lever-snapshot{margin-top:12px}.evidence-strip{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0 0}.source-chip{display:inline-flex;padding:7px 10px;border-radius:999px;background:var(--soft-blue);border:1px solid #dcecf9;color:#35607f;font-size:11.5px;font-weight:800}.source-chip.muted{background:var(--soft-amber);border-color:#f2e3c6;color:#8a641f}.stack{display:grid;gap:10px;margin-top:12px}.srow{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center}.nm{font-size:10px;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#71899f}.bar{display:flex;min-height:32px;border-radius:9px;overflow:hidden}.seg{display:flex;align-items:center;justify-content:center;padding:0 8px;color:#fff;font-size:10.5px;white-space:nowrap}.seg.ramp{background:var(--blue)}.seg.ret{background:var(--violet)}.seg.prem{background:var(--teal)}.seg.cph{background:var(--amber)}.legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11.5px;color:var(--muted)}.dot{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}.dot.ramp{background:var(--blue)}.dot.ret{background:var(--violet)}.dot.prem{background:var(--teal)}.dot.cph{background:var(--amber)}
+
+/* innovation */
+.innovation-intro>.band{align-self:stretch}.innovation-timeline{padding:22px;border-radius:24px;background:#fff;border:1px solid #e2ecf5;box-shadow:var(--shadow-sm);margin-top:12px}.timeline-track{display:grid;grid-template-columns:180px repeat(4,minmax(0,1fr));gap:10px;align-items:stretch}.timeline-label{padding:15px;border-radius:16px}.timeline-label span{display:block;font-size:9.5px;font-weight:900;letter-spacing:.12em}.timeline-label strong{display:block;font-size:18px;margin-top:3px}.reactive .timeline-label{background:var(--soft-pink);color:#9a4565}.proactive .timeline-label{background:var(--soft-teal);color:#167e79}.timeline-step{padding:15px;border-radius:16px;background:#f8fbfe;border:1px solid #e6edf5}.timeline-step b{display:block;font-size:9.5px;color:var(--muted);margin-bottom:7px}.timeline-step span{display:block;font-size:14px;font-weight:800;color:#244766}.timeline-step.cost{background:var(--soft-pink)}.timeline-step.win{background:var(--soft-green)}.timeline-flip{text-align:center;padding:13px}.timeline-flip span{display:block;font-size:9.5px;font-weight:900;letter-spacing:.13em;color:var(--violet)}.timeline-flip strong{display:block;font-size:20px;margin-top:2px}.timeline-caption{margin:15px 0 0;padding-top:13px;border-top:1px solid #e6edf5;font-size:16px;color:var(--text)}
+
+/* experience */
+.ux-principles{display:grid;gap:10px;margin-top:12px}.ux-strip{display:grid;grid-template-columns:50px minmax(0,1fr) minmax(0,1fr);gap:18px;padding:18px}.ux-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--soft-amber),var(--soft-pink));color:#c88318;font-weight:900}.ux-strip>div:nth-child(3){border-left:1px solid #e5edf5;padding-left:18px}.ux-strip span{font-size:9.5px;font-weight:900;letter-spacing:.12em;color:#778da2}.ux-strip h3{font-size:20px;margin:4px 0 6px}.ux-strip p{font-size:14px;line-height:1.52;color:var(--text);margin:0}
+
+/* trust holy-grail treatment */
+#trust{background:linear-gradient(135deg,#f6f3ff,#eff9ff 55%,#eefaf7);border-color:#e4e3f7}#trust .section-intro{align-items:center}#trust .rail h2{max-width:12ch}#trust .grid{margin-top:12px}#trust .card{background:rgba(255,255,255,.92)}#trust .card:nth-child(1){border-top:4px solid var(--violet)}#trust .card:nth-child(2){border-top:4px solid var(--blue)}#trust .card:nth-child(3){border-top:4px solid var(--teal)}#trust .card:nth-child(4){border-top:4px solid var(--green)}#trust .card:nth-child(5){border-top:4px solid var(--amber)}#trust .card:nth-child(6),#trust .card:nth-child(7){border-top:4px solid var(--pink)}
+
+/* scale */
+.scale-intro{margin-bottom:14px}.scale-intro .intro-copy p{font-size:17px;line-height:1.66}.scale-intro .intro-copy .body{margin-top:8px}.cap{font-size:12.5px;color:var(--muted);margin:8px 0 0}.source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}.source-card{text-decoration:none;padding:15px 16px;border-radius:16px;background:#fff;border:1px solid #e2ecf5;box-shadow:var(--shadow-sm)}.source-card strong{display:block;font-size:14.5px;margin-bottom:3px}.source-card span{display:block;font-size:12.5px;line-height:1.45;color:var(--text)}.src{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;padding-left:0;list-style:none;margin-top:12px}.src li{padding:13px 14px;border-radius:14px;background:#fff;border:1px solid #e2ecf5;font-size:12.5px;line-height:1.48;color:var(--text);margin:0}.src a{text-decoration:none}
+
+/* financial case */
+#financial-business-case{padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important}.financial-head{padding:28px 30px 22px;border-radius:26px;background:linear-gradient(135deg,#f3f0ff,#eef8ff);border:1px solid #e2e3f8;margin-bottom:14px}.financial-head .tag{margin-bottom:10px}.financial-head h2{font-size:clamp(38px,4vw,60px);line-height:1;letter-spacing:-.05em;margin:0 0 10px;max-width:18ch}.financial-lede{max-width:78ch;font-size:16.5px;line-height:1.6;color:var(--text);margin:0}.fbc-root>section{display:block!important;margin:14px 0 0;padding:24px!important;border-radius:22px;background:#fff;border:1px solid #e2ecf5;box-shadow:var(--shadow-sm);overflow:visible!important}.fbc-root>section>.wrap{width:100%!important;max-width:none!important;margin:0!important;padding:0!important}.fbc-root .rail{position:static!important;display:block!important;margin:0 0 14px!important}.fbc-root .rail h2{font-size:clamp(30px,2.7vw,42px)!important;line-height:1.05!important;max-width:20ch!important}.fbc-root h1{font-size:clamp(34px,3vw,48px);line-height:1.04;letter-spacing:-.045em}.exec-prose{display:grid;grid-template-columns:1fr 1fr;gap:18px}.exec-prose .punch{grid-row:1/3;font-size:clamp(24px,2vw,34px);line-height:1.16;color:#173b60}.lead{font-size:15px;line-height:1.58;color:var(--text)}.lever,.obj{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:20px;padding:18px 0;border-top:1px solid #e6edf5}.lever:first-child,.obj:first-child{border-top:0}.lever .num{font-size:9.5px;font-weight:900;letter-spacing:.12em;color:var(--blue);text-align:left}.mech,.bench,.a{font-size:13.5px;line-height:1.55;color:var(--text)}.bench{padding:14px;border-radius:14px;background:var(--soft-blue)}.q{font-size:18px;font-weight:850;color:#173b60}.paste{padding:20px;border-radius:18px;background:var(--soft-green);border:1px solid #d6eee2}.paste .k{font-size:9.5px;font-weight:900;letter-spacing:.12em;color:var(--green);text-transform:uppercase}
+
+footer{margin-top:24px;padding:20px 24px;border-radius:18px;background:#fff;border:1px solid #e2ecf5;color:var(--muted);font-size:12.5px}
+
+/* responsive */
+@media (max-width:1100px){.hero-grid,.section-intro,.sim-core-panel,.roleworld-layout,.exec-prose{grid-template-columns:1fr}.section-intro{gap:16px}.rail h2{max-width:none}.phase-lane{grid-template-columns:1fr}.phase-content,.phase-content.two{grid-template-columns:repeat(2,minmax(0,1fr))}.experience-bridge,.steps,.g4,.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.g3{grid-template-columns:repeat(2,minmax(0,1fr))}.timeline-track{grid-template-columns:150px repeat(4,minmax(180px,1fr));overflow-x:auto}.source-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){body{font-size:16px}.wrap{width:min(calc(100% - 22px),var(--max))}nav.toc .inner{width:calc(100vw - 16px);padding:7px}.hero-top{align-items:flex-start;flex-direction:column}.hero-left h1{font-size:clamp(54px,16vw,78px)}.hero-left h1 span{white-space:normal;margin-left:8px}.hero-metrics,.experience-bridge,.steps,.g2,.g3,.g4,.kpis,.phase-content,.phase-content.two,.source-grid,.src{grid-template-columns:1fr}.story-row{grid-template-columns:1fr}.story-row>p{grid-column:1}.ux-strip{grid-template-columns:1fr}.ux-strip>div:nth-child(3){border-left:0;border-top:1px solid #e5edf5;padding:14px 0 0}.roleworld-core{grid-row:auto}.fbc-root>section{padding:18px!important}.financial-head{padding:22px}.lever,.obj{grid-template-columns:1fr;gap:8px}.source-grid,.src{grid-template-columns:1fr}.timeline-track{grid-template-columns:130px repeat(4,minmax(170px,1fr));overflow-x:auto}}
+
+html{scroll-padding-top:86px}
+.nav-brand{flex:0 0 auto;display:inline-flex;align-items:center;padding:9px 13px;border-radius:12px;background:linear-gradient(135deg,#113a68,#0878d1);color:#fff;font-size:10px;font-weight:950;letter-spacing:.11em;white-space:nowrap;box-shadow:0 7px 16px rgba(8,120,209,.18)}
+.phase-lane.build .phase-label strong{color:#bfe6ff}.phase-lane.prove .phase-label strong{color:#9af0e7}.phase-lane.validate .phase-label strong{color:#ffd792}
+.phase-lane.build{background:linear-gradient(90deg,rgba(255,255,255,.02),rgba(75,180,230,.03))}.phase-lane.prove{background:linear-gradient(90deg,rgba(255,255,255,.02),rgba(19,168,162,.04))}.phase-lane.validate{background:linear-gradient(90deg,rgba(255,255,255,.02),rgba(244,173,66,.04))}
+#trust .section-intro::after{content:"SCALE GATE";position:absolute;right:34px;top:30px;font-size:11px;font-weight:950;letter-spacing:.16em;color:#7565e8;background:#fff;padding:8px 12px;border-radius:999px;border:1px solid #dedafa;box-shadow:0 8px 20px rgba(83,71,180,.08)}
+#trust .section-intro{position:relative}
+@media(max-width:760px){.nav-brand{display:none}#trust .section-intro::after{position:static;display:inline-flex;margin-bottom:8px}}
+</style>
+<style id="readability-font-fix">
+/* =========================================================
+   FONT + READABILITY FIX
+   Focus: friendlier typography + readable Problem flow.
+   ========================================================= */
+
+/* FRIENDLIER TYPE SYSTEM */
+body{
+  font-family:"Trebuchet MS","Segoe UI Variable Text","Segoe UI",Arial,sans-serif !important;
+  font-size:18px !important;
+  line-height:1.65 !important;
+}
+h1,h2,h3,
+.hero-left h1,
+.strap,
+.pay-twice-title,
+.band .big,
+.roleworld-core h3,
+.pipeline-head h3{
+  font-family:"Century Gothic","Trebuchet MS","Segoe UI",Arial,sans-serif !important;
+  letter-spacing:-.035em !important;
+}
+.body p,.sub,.intro-copy p{
+  font-size:18.5px !important;
+  line-height:1.72 !important;
+}
+.lede{
+  font-size:21px !important;
+  line-height:1.62 !important;
+}
+.card p,.step p,.bridge-copy p,.roleworld-side p,.roleworld-core p{
+  font-size:16.5px !important;
+  line-height:1.62 !important;
+}
+.card .k,.step .n,.crit,.tag,.journey-num,
+.pipeline-eyebrow,.phase-label span,.phase-step b,
+.story-title span,.ux-strip span,.bridge-copy span{
+  font-size:11.5px !important;
+}
+nav.toc a{
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif !important;
+  font-size:11.5px !important;
+}
+
+/* THE PROBLEM FLOW — substantial cards, never thin pills */
+#paradox .cost-chain{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:16px !important;
+  align-items:stretch !important;
+  width:100% !important;
+  margin-top:22px !important;
+}
+#paradox .cost-connector{
+  display:none !important;
+}
+#paradox .cost-node{
+  position:relative !important;
+  min-height:190px !important;
+  padding:25px 23px 24px !important;
+  border-radius:24px !important;
+  border:1px solid rgba(210,225,240,.95) !important;
+  background:linear-gradient(155deg,#ffffff 0%,#f1f7fd 100%) !important;
+  box-shadow:0 14px 32px rgba(48,86,126,.09) !important;
+  overflow:hidden !important;
+}
+#paradox .cost-node::before{
+  content:"" !important;
+  position:absolute !important;
+  left:0 !important;
+  top:0 !important;
+  width:100% !important;
+  height:6px !important;
+  background:linear-gradient(90deg,#0b78d0,#17b7bf) !important;
+}
+#paradox .cost-node.risk::before{
+  background:linear-gradient(90deg,#f26d9c,#ffb447) !important;
+}
+#paradox .cost-node.end::before{
+  background:linear-gradient(90deg,#ffb447,#21b57d) !important;
+}
+#paradox .cost-no{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:44px !important;
+  height:44px !important;
+  border-radius:14px !important;
+  background:#e7f3ff !important;
+  color:#0b78d0 !important;
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif !important;
+  font-size:14px !important;
+  font-weight:900 !important;
+  letter-spacing:.04em !important;
+  margin-bottom:18px !important;
+}
+#paradox .cost-node.risk .cost-no{
+  background:#fff0f4 !important;
+  color:#df557f !important;
+}
+#paradox .cost-node.end .cost-no{
+  background:#eef9f4 !important;
+  color:#178b65 !important;
+}
+#paradox .cost-node strong{
+  display:block !important;
+  margin-bottom:10px !important;
+  color:#153657 !important;
+  font-family:"Century Gothic","Trebuchet MS","Segoe UI",Arial,sans-serif !important;
+  font-size:clamp(21px,1.65vw,27px) !important;
+  line-height:1.12 !important;
+  letter-spacing:-.025em !important;
+}
+#paradox .cost-node small{
+  display:block !important;
+  color:#58728d !important;
+  font-family:"Trebuchet MS","Segoe UI",Arial,sans-serif !important;
+  font-size:16px !important;
+  line-height:1.5 !important;
+}
+
+/* Add sequence cue without compressing content */
+#paradox .cost-node:not(.end)::after{
+  content:"→" !important;
+  position:absolute !important;
+  right:14px !important;
+  bottom:14px !important;
+  color:#a8bbcc !important;
+  font-size:25px !important;
+  font-weight:700 !important;
+}
+
+/* Make the key problem statement visually lead into the cards */
+#paradox .section-intro .body > p:last-child{
+  margin-bottom:0 !important;
+  padding:18px 20px !important;
+  border-radius:18px !important;
+  background:linear-gradient(90deg,rgba(11,120,208,.07),rgba(23,183,191,.06)) !important;
+  border-left:5px solid #0b78d0 !important;
+}
+
+/* Responsive: never compress into unreadable columns */
+@media (max-width:1100px){
+  #paradox .cost-chain{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+}
+@media (max-width:650px){
+  body{font-size:17px !important}
+  #paradox .cost-chain{
+    grid-template-columns:1fr !important;
+  }
+  #paradox .cost-node{
+    min-height:0 !important;
+  }
+  #paradox .cost-node:not(.end)::after{
+    content:"↓" !important;
+  }
+}
+</style>
+<style id="balanced-interface-fix">
+/* =========================================================
+   BALANCED INTERFACE PASS
+   One consistent rhythm, no giant empty rails, no tiny metadata.
+   ========================================================= */
+:root{
+  --ui-bg:#f3f8fe;
+  --ui-surface:#ffffff;
+  --ui-ink:#15304f;
+  --ui-text:#42617f;
+  --ui-muted:#7189a1;
+  --ui-blue:#0878cf;
+  --ui-teal:#16aaa7;
+  --ui-violet:#7365e8;
+  --ui-amber:#f0a83d;
+  --ui-rose:#ea6a94;
+  --ui-green:#24a977;
+  --ui-line:rgba(71,110,148,.14);
+  --ui-shadow:0 16px 38px rgba(54,91,132,.08);
+}
+body{
+  font-family:"Aptos","Segoe UI",system-ui,sans-serif!important;
+  font-size:18px!important;
+  color:var(--ui-text)!important;
+  background:linear-gradient(180deg,#f8fbff,#eff6fd 55%,#f8fbff)!important;
+}
+h1,h2,h3,.hero-left h1,.strap,.band .big,.pay-twice-title{
+  font-family:"Aptos Display","Segoe UI",system-ui,sans-serif!important;
+  color:var(--ui-ink)!important;
+}
+
+/* Global menu: top-level sections only, readable and contained */
+nav.toc{top:8px!important;padding:0 0 6px!important;background:linear-gradient(180deg,rgba(243,248,254,.98),rgba(243,248,254,.94))!important}
+nav.toc .inner{
+  width:min(calc(100% - 32px),1400px)!important;
+  min-height:58px!important;
+  padding:8px 10px!important;
+  gap:5px!important;
+  background:rgba(255,255,255,.94)!important;
+  border:1px solid rgba(182,205,226,.72)!important;
+  box-shadow:0 12px 28px rgba(54,91,132,.10)!important;
+  border-radius:20px!important;
+}
+nav.toc .nav-brand{font-size:11px!important;padding:10px 14px!important;border-radius:14px!important;background:linear-gradient(135deg,var(--ui-blue),#126eb8)!important;color:#fff!important;letter-spacing:.09em!important}
+nav.toc a{font-size:11.5px!important;line-height:1!important;padding:10px 12px!important;border-radius:13px!important;color:#5f7891!important;letter-spacing:.055em!important}
+nav.toc a:hover{background:#edf6ff!important;color:var(--ui-blue)!important}
+nav.toc a[aria-current="true"]{background:linear-gradient(135deg,var(--ui-blue),var(--ui-teal))!important;color:#fff!important}
+
+/* Universal section rhythm: header is horizontal, content uses full width */
+section{
+  display:block!important;
+  margin-top:26px!important;
+  padding:34px 36px 38px!important;
+  border-radius:30px!important;
+}
+section>.rail{
+  position:static!important;
+  display:grid!important;
+  grid-template-columns:minmax(180px,230px) minmax(0,1fr)!important;
+  grid-template-rows:auto auto!important;
+  column-gap:38px!important;
+  row-gap:10px!important;
+  align-items:start!important;
+  margin:0 0 24px!important;
+  padding:0 0 22px!important;
+  border-bottom:1px solid var(--ui-line)!important;
+}
+section>.rail .tag{grid-column:1!important;grid-row:1!important;justify-self:start!important;margin:0!important}
+section>.rail h2{
+  grid-column:2!important;grid-row:1 / span 2!important;
+  max-width:22ch!important;
+  margin:0!important;
+  font-size:clamp(34px,3.05vw,50px)!important;
+  line-height:1.02!important;
+  letter-spacing:-.045em!important;
+  font-weight:700!important;
+}
+section>.rail .crit{
+  grid-column:1!important;grid-row:2!important;
+  margin:0!important;
+  padding:0!important;
+  font-size:12px!important;
+  line-height:1.45!important;
+  letter-spacing:.085em!important;
+  color:#7f95aa!important;
+  text-transform:uppercase!important;
+}
+section>.rail .crit .anchor{display:none!important}
+section>.body,section>.sub{width:100%!important;max-width:none!important;margin:0 0 18px!important}
+section>.body p,section>.sub{font-size:18px!important;line-height:1.68!important;color:var(--ui-text)!important}
+section>.body p{max-width:80ch!important}
+section>.body .lede{font-size:20px!important;line-height:1.58!important;color:#294866!important}
+.tag{font-size:11px!important;padding:9px 13px!important;border-radius:999px!important}
+
+/* Solution: narrative becomes 3 balanced editorial columns, then the flagship pipeline */
+#solution>.body{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:24px!important;
+  margin-bottom:20px!important;
+}
+#solution>.body p{margin:0!important;padding:18px 0 0!important;border-top:4px solid #d9e8f6!important;max-width:none!important}
+#solution>.body p:nth-child(1){border-color:var(--ui-blue)!important}
+#solution>.body p:nth-child(2){border-color:var(--ui-violet)!important}
+#solution>.body p:nth-child(3){border-color:var(--ui-teal)!important}
+#solution .capability-pipeline{margin-top:18px!important}
+
+/* Role simulation: eliminate the giant empty core card */
+#roleworld .sim-core-panel{margin-top:4px!important}
+#roleworld .roleworld-layout{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  margin-top:16px!important;
+}
+#roleworld .roleworld-core{
+  grid-column:1 / -1!important;
+  grid-row:auto!important;
+  min-height:0!important;
+  padding:26px 28px!important;
+  border-radius:24px!important;
+}
+#roleworld .roleworld-core h3{max-width:none!important;font-size:clamp(34px,2.7vw,46px)!important;margin-bottom:12px!important}
+#roleworld .roleworld-core p{max-width:68ch!important;margin:0!important}
+#roleworld .roleworld-side{min-height:0!important;padding:22px 24px!important}
+#roleworld .band{margin-top:18px!important}
+
+/* Business impact: internal sub-navigation replaces global Impact 1/2/3 links */
+#impact .impact-subnav{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:14px!important;
+  margin:8px 0 10px!important;
+}
+#impact .impact-subnav a{
+  text-decoration:none!important;
+  display:grid!important;
+  grid-template-columns:42px 1fr!important;
+  gap:12px!important;
+  align-items:center!important;
+  padding:17px 18px!important;
+  border-radius:19px!important;
+  background:#fff!important;
+  border:1px solid #dce9f5!important;
+  box-shadow:0 10px 24px rgba(54,91,132,.06)!important;
+}
+#impact .impact-subnav span{display:grid!important;place-items:center!important;width:40px!important;height:40px!important;border-radius:13px!important;background:#eaf5ff!important;color:var(--ui-blue)!important;font-weight:900!important}
+#impact .impact-subnav strong{display:block!important;font-size:18px!important;color:var(--ui-ink)!important}
+#impact .impact-subnav small{display:block!important;font-size:13px!important;color:#758ba0!important;margin-top:2px!important}
+#impact .grid{margin-top:16px!important}
+
+/* Why now / Value / Model / Scale: stop the 50% empty-left phenomenon */
+#whynow .grid,#value .grid,#model .grid,#scale .grid,#feasibility .grid,#trust .grid,#users .grid{
+  margin-top:16px!important;
+}
+#whynow .band,#value .band,#model .band,#scale .band,#feasibility .band{margin-top:18px!important}
+#whynow .card,#value .card,#model .card,#scale .card,#feasibility .card,#trust .card,#users .card{height:auto!important;min-height:0!important;padding:22px 23px!important}
+#whynow .card h3,#value .card h3,#model .card h3,#scale .card h3,#feasibility .card h3,#trust .card h3,#users .card h3{font-size:24px!important;line-height:1.12!important}
+#whynow .card p,#value .card p,#model .card p,#scale .card p,#feasibility .card p,#trust .card p,#users .card p{font-size:16px!important;line-height:1.55!important}
+
+/* Innovation: make this the visual high point */
+#innovation{
+  background:linear-gradient(145deg,#fbfdff,#f3f6ff 46%,#eefbf9)!important;
+  border:1px solid #dce9f5!important;
+  box-shadow:0 18px 46px rgba(74,91,154,.08)!important;
+}
+#innovation>.rail{border-bottom-color:rgba(115,101,232,.18)!important}
+#innovation>.rail .tag{background:#eeeaff!important;color:var(--ui-violet)!important}
+#innovation>.band{background:linear-gradient(135deg,#6258dd,#0e82cc 52%,#15aaa5)!important;margin:0 0 20px!important}
+.innovation-sequence{padding:22px!important;border-radius:26px!important;background:#fff!important;border:1px solid #dce8f4!important;box-shadow:0 14px 32px rgba(54,91,132,.06)!important;margin:0 0 20px!important}
+.sequence-side{padding:14px 16px!important;border-radius:18px!important}
+.sequence-side.reactive{background:#fff5f8!important}.sequence-side.proactive{background:#effbf8!important}
+.sequence-label{font-size:11px!important;font-weight:900!important;letter-spacing:.13em!important;color:#73889f!important;margin-bottom:12px!important}
+.sequence-track{display:grid!important;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr!important;gap:10px!important;align-items:center!important}
+.sequence-track>div{padding:14px!important;border-radius:16px!important;background:#fff!important;border:1px solid #e4edf6!important;min-height:86px!important}
+.sequence-track b{display:block!important;font-size:11px!important;color:var(--ui-blue)!important;margin-bottom:6px!important}.sequence-track span{font-size:16px!important;font-weight:750!important;color:var(--ui-ink)!important}.sequence-track i{font-style:normal!important;color:#9ab0c5!important;font-size:22px!important}
+.sequence-cost{border-color:#f2c7d5!important}.sequence-win{border-color:#bde8d7!important}
+.sequence-flip{text-align:center!important;padding:14px 0!important}.sequence-flip span{display:block!important;font-size:11px!important;letter-spacing:.14em!important;color:var(--ui-violet)!important;font-weight:900!important}.sequence-flip strong{display:block!important;font-size:clamp(28px,2.2vw,38px)!important;color:#243d63!important;margin-top:3px!important}
+.sequence-caption{margin:16px 0 0!important;padding-top:16px!important;border-top:1px solid #e5edf5!important;font-size:17px!important;color:#46627e!important}
+#innovation .grid.g4{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+/* Feasibility: make 90-day pilot a real roadmap, not little eggs */
+#feasibility .steps{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important;margin-top:18px!important}
+#feasibility .step{padding:22px!important;border-radius:20px!important;min-height:0!important;border:1px solid #dce8f4!important;background:#fff!important;box-shadow:0 10px 24px rgba(54,91,132,.05)!important}
+#feasibility .step .n{display:inline-block!important;padding:7px 10px!important;border-radius:999px!important;background:#eef6ff!important;color:var(--ui-blue)!important;margin-bottom:12px!important}
+#feasibility .step h3{font-size:22px!important;line-height:1.12!important}
+
+/* Experience */
+#experience .ux-principles{margin-top:16px!important}
+#experience .ux-strip{padding:20px 22px!important;min-height:0!important}
+#experience .ux-strip h3{font-size:21px!important;line-height:1.15!important}
+#experience .ux-strip p{font-size:15px!important;line-height:1.55!important}
+
+/* Guardrails = scale gate */
+#trust{background:linear-gradient(145deg,#fff,#f7fbff 55%,#f3fbf8)!important;border:1px solid #dce9f5!important}
+.trust-banner{display:grid!important;grid-template-columns:180px 1fr 1fr!important;gap:24px!important;align-items:center!important;padding:24px 26px!important;border-radius:24px!important;background:linear-gradient(135deg,#f0edff,#eef8ff 55%,#eefbf7)!important;border:1px solid #dedafc!important;margin:0 0 18px!important}
+.trust-banner span{font-size:11px!important;letter-spacing:.14em!important;font-weight:900!important;color:var(--ui-violet)!important}.trust-banner strong{font-size:28px!important;line-height:1.12!important;color:#223c60!important}.trust-banner p{margin:0!important;font-size:16px!important;line-height:1.55!important;color:#526d87!important}
+#trust .grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+
+/* Financial business case */
+#financial-business-case>.rail h2{font-size:clamp(36px,3.2vw,52px)!important;max-width:none!important}
+.fbc-root>section{margin:14px 0 0!important;padding:26px 28px!important;border-radius:24px!important}
+.fbc-root>section>.wrap{max-width:none!important}
+.fbc-root h1{font-size:clamp(34px,3vw,48px)!important;line-height:1.04!important}
+
+/* Evidence base */
+#sources .source-grid{margin:14px 0 16px!important}
+#sources .src{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+
+/* Typography hierarchy: no ant-size support copy */
+.ghead,.k,.n,.crit,.cap,.kick,.eyebrow{font-size:12px!important}
+.cap{line-height:1.55!important;color:#647f99!important}
+
+/* Responsive */
+@media(max-width:1000px){
+  section>.rail{grid-template-columns:1fr!important;row-gap:8px!important}
+  section>.rail .tag,section>.rail h2,section>.rail .crit{grid-column:1!important;grid-row:auto!important}
+  section>.rail h2{max-width:none!important}
+  #solution>.body{grid-template-columns:1fr!important}
+  #impact .impact-subnav{grid-template-columns:1fr!important}
+  .sequence-track{grid-template-columns:1fr!important}.sequence-track i{transform:rotate(90deg);justify-self:center!important}
+  #feasibility .steps{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .trust-banner{grid-template-columns:1fr!important}
+  #trust .grid.g3{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:650px){
+  section{padding:24px 18px 28px!important}
+  #feasibility .steps,#trust .grid.g3,#innovation .grid.g4,#sources .src{grid-template-columns:1fr!important}
+  nav.toc .inner{width:calc(100% - 16px)!important}
+}
+</style><style id="final-proportion-pass">
+/* =========================================================
+   FINAL PROPORTION + RHYTHM PASS
+   Fixes section headers, typography scale, spacing, dark blocks.
+   ========================================================= */
+
+/* Section intro: controlled split with readable proportions */
+.section-intro{
+  display:grid!important;
+  grid-template-columns:minmax(300px,380px) minmax(0,1fr)!important;
+  gap:38px!important;
+  align-items:start!important;
+  margin:0 0 22px!important;
+  padding:0 0 20px!important;
+  border-bottom:1px solid rgba(69,107,145,.12)!important;
+}
+.section-intro>.rail{
+  display:block!important;
+  position:static!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+}
+.section-intro>.rail .tag{margin:0 0 15px!important}
+.section-intro>.rail h2{
+  margin:0 0 14px!important;
+  max-width:13ch!important;
+  font-size:clamp(34px,3vw,46px)!important;
+  line-height:1.02!important;
+  font-weight:720!important;
+  letter-spacing:-.045em!important;
+}
+.section-intro>.rail .crit{
+  margin:0!important;
+  max-width:26ch!important;
+  font-size:12.5px!important;
+  line-height:1.48!important;
+  letter-spacing:.10em!important;
+  color:#7890a8!important;
+}
+.section-intro>.body,
+.section-intro>.intro-copy{
+  margin:0!important;
+  padding:4px 0 0!important;
+  align-self:start!important;
+}
+.section-intro>.body p,
+.section-intro>.intro-copy p{
+  max-width:72ch!important;
+  margin:0 0 15px!important;
+  font-size:18px!important;
+  line-height:1.62!important;
+}
+.section-intro>.body p:last-child,
+.section-intro>.intro-copy p:last-child{margin-bottom:0!important}
+.section-intro>.body .lede,
+.section-intro>.intro-copy .lede{font-size:20px!important;line-height:1.55!important}
+
+/* Innovation/Trust: right-hand feature is part of intro, not a dark slab */
+.innovation-intro>.band{
+  margin:0!important;
+  padding:26px 28px!important;
+  border-radius:24px!important;
+  background:linear-gradient(135deg,#f0edff,#eef8ff 52%,#eefbf8)!important;
+  border:1px solid #dddafa!important;
+  box-shadow:none!important;
+  color:var(--ui-ink)!important;
+}
+.innovation-intro>.band .kick{color:#6b5edc!important;font-size:11px!important}
+.innovation-intro>.band .big{color:#17385b!important;font-size:clamp(30px,2.4vw,40px)!important;margin:8px 0 10px!important}
+.innovation-intro>.band .small{color:#526d87!important;font-size:16.5px!important;line-height:1.55!important}
+
+.section-intro>.trust-banner{
+  grid-column:2!important;
+  margin:0!important;
+  padding:24px 26px!important;
+}
+.section-intro>.trust-banner + .body{grid-column:2!important;margin-top:14px!important}
+
+/* Solution intro: no giant title versus tiny support text */
+#solution .section-intro>.rail h2{font-size:clamp(33px,2.8vw,44px)!important;max-width:14ch!important}
+#solution .section-intro>.rail .crit{font-size:12.5px!important;color:#6f87a0!important}
+#solution .section-intro>.body{display:block!important}
+#solution .section-intro>.body p{padding:0!important;border:0!important}
+
+/* Scale + feasibility: readable title, not an empty half-screen */
+#scale .section-intro>.rail h2,
+#feasibility .section-intro>.rail h2,
+#experience .section-intro>.rail h2,
+#trust .section-intro>.rail h2{max-width:12ch!important}
+#scale .section-intro>.intro-copy .body{margin-top:12px!important}
+#scale .section-intro>.intro-copy .body p{font-size:17px!important;line-height:1.58!important}
+
+/* Role Simulation: keep visual importance without giant dead container */
+#roleworld .section-intro{margin-bottom:18px!important}
+#roleworld .sim-core-panel{padding:22px 24px!important;min-height:0!important}
+#roleworld .roleworld-core{min-height:0!important;padding:24px 26px!important}
+#roleworld .roleworld-core h3{font-size:clamp(34px,2.7vw,44px)!important;line-height:1.05!important}
+#roleworld .roleworld-side{padding:20px 22px!important;min-height:0!important}
+#roleworld>.band{
+  background:linear-gradient(135deg,#eaf5ff,#ecfbf8 55%,#f1efff)!important;
+  color:#17385b!important;
+  box-shadow:none!important;
+  border:1px solid #dbe8f5!important;
+}
+#roleworld>.band .kick{color:#0878cf!important}
+#roleworld>.band .big{color:#17385b!important}
+#roleworld>.band .small{color:#526d87!important}
+
+/* Cards: consistent internal spacing, no text stuck in corners */
+.card,.step,.bridge-item,.ux-strip,.source-card,.kpi{
+  padding:22px 24px!important;
+}
+.card .k,.step .n,.bridge-copy span,.ux-strip span{margin-bottom:9px!important;display:block!important}
+.card h3,.step h3,.bridge-copy h3,.ux-strip h3{margin:0 0 10px!important}
+.card p,.step p,.bridge-copy p,.ux-strip p{margin:0!important}
+
+/* Financial case header uses space rather than leaving a blank half */
+.financial-head{
+  display:grid!important;
+  grid-template-columns:minmax(280px,.7fr) minmax(0,1.3fr)!important;
+  gap:36px!important;
+  align-items:end!important;
+  padding:4px 0 22px!important;
+  margin-bottom:18px!important;
+  border-bottom:1px solid rgba(69,107,145,.12)!important;
+}
+.financial-head .tag{grid-column:1!important;margin:0 0 14px!important;justify-self:start!important}
+.financial-head h2{grid-column:1!important;margin:0!important;font-size:clamp(38px,3.2vw,52px)!important;line-height:1!important;max-width:10ch!important}
+.financial-head .financial-lede{grid-column:2!important;grid-row:1 / span 2!important;align-self:end!important;margin:0!important;font-size:19px!important;line-height:1.6!important;max-width:60ch!important;color:#46627e!important}
+
+/* Business Impact internal navigator: balanced horizontal proportions */
+#impact .impact-subnav a{grid-template-columns:44px minmax(0,1fr)!important;padding:16px 18px!important}
+#impact .impact-subnav strong{font-size:18px!important;line-height:1.15!important}
+#impact .impact-subnav small{font-size:13.5px!important}
+
+/* Reduce excessive vertical gaps globally */
+section> * + *{margin-top:16px!important}
+.section-intro + *{margin-top:0!important}
+.t-scroll{margin-top:14px!important}
+.ghead{margin-top:22px!important;margin-bottom:12px!important}
+
+@media(max-width:980px){
+  .section-intro{grid-template-columns:1fr!important;gap:18px!important}
+  .section-intro>.rail h2{max-width:none!important}
+  .section-intro>.rail .crit{max-width:none!important}
+  .section-intro>.trust-banner,.section-intro>.trust-banner + .body{grid-column:1!important}
+  .financial-head{grid-template-columns:1fr!important;gap:16px!important}
+  .financial-head .tag,.financial-head h2,.financial-head .financial-lede{grid-column:1!important;grid-row:auto!important}
+  .financial-head h2{max-width:none!important}
+}
+</style><style id="prototype-v2-alignment">
+/* Prototype V2 alignment additions — content only, preserving the established visual language */
+.validation-principle{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.validation-principle>div{padding:14px 16px;border-radius:17px;background:linear-gradient(135deg,#eef8ff,#eefaf7);border:1px solid #d9e9f4}.validation-principle span,.product-view>span,.operating-views article>span,.simulation-formats article>span,.prototype-proof-grid article>span,.prototype-alignment-note>span{display:block;font-size:10px;font-weight:900;letter-spacing:.13em;color:var(--blue);text-transform:uppercase;margin-bottom:5px}.validation-principle strong{display:block;font-size:14px;line-height:1.45;color:#204567}
+.product-views,.operating-views,.prototype-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:14px 0 18px}.product-view,.operating-views article,.prototype-proof-grid article{padding:20px 21px;border-radius:20px;background:#fff;border:1px solid #e1ebf5;box-shadow:var(--shadow-sm)}.product-view:nth-child(2){background:linear-gradient(145deg,#fff,var(--soft-teal))}.product-view:nth-child(3){background:linear-gradient(145deg,#fff,var(--soft-violet))}.product-view h3,.operating-views h3,.prototype-proof-grid h3{margin:0 0 8px;font-size:23px;line-height:1.1}.product-view p,.operating-views p,.prototype-proof-grid p{margin:0;font-size:15px;line-height:1.55;color:var(--text)}
+.prototype-role-case{padding:22px 24px;border-radius:24px;background:linear-gradient(135deg,#eff7ff,#eefbf8 62%,#f2efff);border:1px solid #dce9f5;margin:12px 0 16px}.role-transition{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto minmax(0,1fr);gap:12px;align-items:center}.role-transition span{font-size:10px;font-weight:900;letter-spacing:.11em;color:#70879e}.role-transition strong{font-size:16px;line-height:1.3}.role-transition i{font-style:normal;font-size:24px;color:var(--blue)}.prototype-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:16px 0}.prototype-stats>div{padding:12px;border-radius:15px;background:rgba(255,255,255,.82);border:1px solid #e2ebf4}.prototype-stats b{display:block;font-size:25px;color:#173b60}.prototype-stats span{font-size:11px;color:#6e859b}.prototype-role-case>p{margin:0;font-size:14.5px;line-height:1.55;color:var(--text)}
+.simulation-formats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}.simulation-formats article{padding:18px;border-radius:19px;background:#fff;border:1px solid #e2ebf4;box-shadow:var(--shadow-sm)}.simulation-formats article:nth-child(2){background:linear-gradient(145deg,#fff,var(--soft-blue))}.simulation-formats article:nth-child(3){background:linear-gradient(145deg,#fff,var(--soft-violet))}.simulation-formats article:nth-child(4){background:linear-gradient(145deg,#fff,var(--soft-amber))}.simulation-formats h3{font-size:20px;line-height:1.12;margin:5px 0 8px}.simulation-formats p{font-size:14px;line-height:1.5;color:var(--text);margin:0}.ai-assistant-band{display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;align-items:center;padding:22px 24px;border-radius:22px;background:linear-gradient(135deg,#0d72c6,#6358d8 55%,#14a7a4);color:#fff;margin:12px 0 16px}.ai-assistant-band span{font-size:10px;font-weight:900;letter-spacing:.13em;color:#bfe5ff}.ai-assistant-band h3{margin:5px 0 0;color:#fff;font-size:28px}.ai-assistant-band p{margin:0;color:rgba(255,255,255,.84);font-size:15.5px;line-height:1.58}.ai-assistant-band p strong{color:#fff}
+#roleworld .experience-bridge{grid-template-columns:repeat(5,minmax(0,1fr))}
+.operating-views{margin-top:6px}.operating-views article:nth-child(2){background:linear-gradient(145deg,#fff,var(--soft-teal))}.operating-views article:nth-child(3){background:linear-gradient(145deg,#fff,var(--soft-violet))}
+.prototype-proof-grid{margin-top:16px}.prototype-proof-grid article{background:linear-gradient(145deg,#fff,#f7fbff)}.prototype-boundary,.nonmonetised-controls{padding:15px 17px;border-radius:16px;background:var(--soft-amber);border-left:4px solid var(--amber);font-size:14px;line-height:1.55;color:#5c6f80;margin:12px 0}.nonmonetised-controls strong{color:#795816}
+.prototype-alignment-note{padding:20px 22px;border-radius:21px;background:linear-gradient(135deg,var(--soft-violet),var(--soft-blue),var(--soft-teal));border:1px solid #dde7f4;margin:14px 0 16px}.prototype-alignment-note p{font-size:15px;line-height:1.58;color:var(--text);margin:7px 0 0}
+#trust .grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:1100px){.product-views,.operating-views,.prototype-proof-grid,.simulation-formats{grid-template-columns:repeat(2,minmax(0,1fr))}.validation-principle{grid-template-columns:1fr}.prototype-stats{grid-template-columns:repeat(3,minmax(0,1fr))}.role-transition{grid-template-columns:1fr}.role-transition i{transform:rotate(90deg);justify-self:start}.ai-assistant-band{grid-template-columns:1fr}#roleworld .experience-bridge{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.product-views,.operating-views,.prototype-proof-grid,.simulation-formats,.prototype-stats,#roleworld .experience-bridge{grid-template-columns:1fr}.validation-principle{grid-template-columns:1fr}.role-transition{grid-template-columns:1fr}.ai-assistant-band{padding:19px}}
+</style>
+<style id="prototype-v2-contrast-fix">
+#solution .capability-pipeline .pipeline-head h3,
+#solution .capability-pipeline .phase-label strong,
+#solution .capability-pipeline .phase-step strong,
+#solution .capability-pipeline .pipeline-note,
+#solution .capability-pipeline .pipeline-note strong{color:#fff!important}
+.ai-assistant-band h3,.ai-assistant-band p,.ai-assistant-band p strong{color:#fff!important}
+#ask>.band .big,#ask>.band .small{color:#fff!important}
+</style>
+<style id="domain-coverage-style">
+.domain-coverage-strip{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 14px}.domain-coverage-strip span{display:inline-flex;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.86);border:1px solid #dde8f2;color:#496780;font-size:11px;font-weight:750;line-height:1.2}
+</style><style id="authorised-layout-and-new-section-styles">
+/* 1. Fix the exact narrow business-impact row from attachment 2 without changing the approved design. */
+#impact .section-intro>.impact-subnav{grid-column:1/-1!important;width:100%!important;min-width:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:14px!important;margin:12px 0 0!important}
+#impact .impact-subnav a{min-width:0!important;grid-template-columns:44px minmax(0,1fr)!important;white-space:normal!important}
+#impact .impact-subnav strong{overflow-wrap:normal!important;word-break:normal!important}
+@media(max-width:760px){#impact .section-intro>.impact-subnav{grid-template-columns:1fr!important}}
+/* 1. The duplicated trust label from attachment 5 is a pseudo-element, not the authorised visible banner text. */
+#trust .section-intro::after{display:none!important;content:none!important}
+/* 2. Navigation keeps existing look, but remains in viewport and has usable scrolling at all sizes. */
+nav.toc{top:0!important;z-index:550!important;padding:6px 0!important;background:rgba(247,251,255,.98)!important;backdrop-filter:blur(12px)!important}
+nav.toc .inner{width:min(calc(100% - 24px),var(--max))!important;max-width:100%!important;overflow-x:auto!important;overscroll-behavior-inline:contain!important;scrollbar-width:thin;scrollbar-color:#b8d6e9 transparent;scroll-padding-inline:14px;}
+nav.toc a{flex:0 0 auto!important;white-space:nowrap!important}
+nav.toc .nav-brand{position:sticky!important;left:0!important;z-index:3!important}
+html{scroll-padding-top:var(--active-nav-height,88px)!important}
+body>.wrap>section,body>.wrap>header{scroll-margin-top:var(--active-nav-height,88px)!important}
+@media(max-width:760px){nav.toc .inner{width:calc(100% - 12px)!important}}
+/* 4. Tooltips appear in a fixed viewport layer, independent of table/card overflow. */
+.tip:focus-visible{outline:2px solid var(--blue)!important;outline-offset:3px}
+.tooltip-portal{position:fixed;display:block;left:0;top:0;max-width:min(340px,calc(100vw - 24px));max-height:min(250px,calc(100vh - 24px));overflow:auto;z-index:99999;pointer-events:none;background:#103a68;color:white;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:0 18px 38px rgba(16,58,104,.28);font:400 13px/1.46 Aptos,'Segoe UI',system-ui,sans-serif;padding:12px 14px;overflow-wrap:anywhere}
+.tiptext{display:none!important}
+/* Financial method content transferred, using the existing card/table styles. */
+.financial-inputs{margin:16px 0 20px}.financial-inputs>h3,.scale-model-in-impact>h3,.formula-notes h3,.evidence-method h3{font-size:clamp(21px,1.7vw,27px);line-height:1.2;color:var(--navy);margin:0 0 10px}
+.financial-inputs .t-scroll{margin-top:12px}.financial-inputs table{min-width:660px}.financial-inputs td:nth-child(2){font-weight:800;white-space:normal}.formula-notes{padding:16px 18px;border-left:4px solid var(--blue);background:var(--soft-blue);border-radius:14px;margin:15px 0}.formula-notes p{font-size:15px;line-height:1.55;margin-bottom:8px}.nonmonetised-controls{padding:14px 16px;background:var(--soft-amber);border-left:4px solid var(--amber);border-radius:13px;font-size:15px;line-height:1.55;margin-top:14px}.scale-model-in-impact{margin-top:20px}
+/* New authorised content uses the existing design system. */
+#tokenomics .card,#reusability .card{height:auto}#tokenomics .card h3,#reusability .card h3{font-size:clamp(20px,1.65vw,27px)}#reusability .card ul{margin:11px 0 0;padding-left:20px;color:var(--text);font-size:15.5px;line-height:1.62}#reusability .card li{margin-bottom:6px}#reusability>.band{margin-top:16px}#reusability>.band .big,#reusability>.band .small,#reusability>.band .kick{color:white!important}
+#questions .rows{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+#questions .obj{display:block;min-width:0;padding:18px 19px;border-radius:18px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow-sm)}
+#questions .q{font-size:18px;font-weight:800;color:var(--navy);line-height:1.3;margin-bottom:8px}
+#questions .a{font-size:15px;line-height:1.58;color:var(--text)}
+.evidence-ref{color:var(--blue);font-size:13px;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}.evidence-ref:focus-visible{outline:2px solid var(--blue)}
+.evidence-method{margin-top:18px;padding:18px 20px;background:var(--soft-blue);border-radius:16px;border:1px solid var(--line)}
+.evidence-method p{font-size:15px;line-height:1.62;color:var(--text)}
+@media(max-width:1020px){#questions .rows{grid-template-columns:1fr}#reusability .reusable-architecture{grid-template-columns:1fr}}
+@media(max-width:720px){.financial-inputs .t-scroll{max-width:100%;overflow-x:auto}#questions .obj{padding:16px}}
+</style>
+</head>
+<body>
+<nav class="toc" data-glean-id="toc">
+<div class="inner"><span class="nav-brand">TALENT INCUBATOR</span>
+<a href="#paradox">The problem</a>
+<a href="#solution">The solution</a>
+<a href="#roleworld">Role simulation</a>
+<a href="#users">Who it serves</a>
+<a href="#impact">Business impact</a>
+<a href="#innovation">Innovation</a>
+<a href="#feasibility">Feasibility</a>
+<a href="#scale">Scale &amp; adoption</a>
+<a href="#experience">Experience</a>
+<a href="#trust">Guardrails</a>
+<a href="#tokenomics">AI efficiency</a>
+<a href="#reusability">Reusability</a>
+<a href="#ask">The ask</a>
+<a href="#questions">Key questions</a>
+<a href="#sources">Evidence base</a>
+
+</div>
+</nav>
+<div class="wrap">
+<header class="cover" data-glean-id="cover">
+<div class="hero-top">
+<p class="eyebrow">FY27 #AIWomen Hackathon · Asia-Pacific &amp; Japan</p>
+<span class="hero-badge">Readiness before requisition</span>
+</div>
+<div class="hero-grid">
+<div class="hero-left">
+<h1>Talent<br/><span>Incubator</span></h1>
+<p class="strap">Hidden internal capability becomes external cost.</p>
+<p class="hero-explain">Talent Incubator builds and proves future-role capability <strong>before demand appears</strong> — so Dell can recover productive capacity sooner and reduce dependence on slower, higher-cost external hiring.</p>
+</div>
+<div class="hero-right">
+<div class="pay-twice-kicker">THE BUSINESS PROBLEM</div>
+<div class="pay-twice-title"><span class="big-two">2×</span><span>Dell pays twice</span></div>
+<div class="pay-twice-lines">
+<div><span class="loss-mark"></span><strong>Lost internal capacity</strong><small>capability exists or could be built, but stays invisible</small></div>
+<div><span class="loss-mark"></span><strong>External cost + slower ramp</strong><small>Dell buys capability later at a premium and waits for productivity</small></div>
+</div>
+</div>
+</div>
+<div aria-label="Talent Incubator capability journey" class="hero-journey">
+<div class="journey-step"><span class="journey-num">01</span><strong>Build the role twin</strong><small>current → target role, activities, tools and evidence</small></div>
+<div class="journey-arrow">→</div>
+<div class="journey-step"><span class="journey-num">02</span><strong>Simulate the work</strong><small>conversations, workflows, decisions and tool sandboxes</small></div>
+<div class="journey-arrow">→</div>
+<div class="journey-step"><span class="journey-num">03</span><strong>Close exact gaps</strong><small>AI coaching plus evidenced practice variations</small></div>
+<div class="journey-arrow">→</div>
+<div class="journey-step live"><span class="journey-num">04</span><strong>Prove transfer</strong><small>bounded Dell project with target-role manager and team</small></div>
+<div class="journey-arrow">→</div>
+<div class="journey-step"><span class="journey-num">05</span><strong>Human validation</strong><small>manager feedback, role-expert review and rework loop</small></div>
+<div class="journey-arrow">→</div>
+<div class="journey-step outcome"><span class="journey-num">06</span><strong>Time-bound passport</strong><small>active for 6 or 12 months; practice always remains open</small></div>
+</div>
+<div class="validation-principle">
+<div><span>CONTINUOUS PRACTICE</span><strong>Employees can practise before and after Gate 3 without deactivating an active validation.</strong></div>
+<div><span>TIME-BOUND READINESS</span><strong>The role builder sets Gate 3 validity to 6 months or 1 year; after expiry, evidence remains and readiness must be refreshed.</strong></div>
+</div><div class="hero-metrics" data-glean-id="cover-kpis">
+<div class="metric"><div class="v">2–4 mo</div><div class="l">productive capacity recovered per validated internal move</div></div>
+<div class="metric"><div class="v">$3.2M</div><div class="l">modelled annual value · one role family</div></div>
+<div class="metric"><div class="v">9×</div><div class="l">modelled return on pilot cost</div></div>
+<div class="metric"><div class="v">$18M</div><div class="l">modelled net annual value · ten role families</div></div>
+</div>
+<p class="hero-caveat">Illustrative, benchmark-anchored model — not measured Dell results. Pilot days 1–15 replace placeholders with Dell baselines.</p>
+</header>
+<section data-glean-id="paradox" id="paradox">
+<div class="section-intro"><div class="rail">
+<p class="tag rose">THE PROBLEM</p>
+<h2>Dell pays twice for capability it cannot see early enough.</h2>
+<p class="crit" data-glean-id="crit-paradox">SETS UP · BUSINESS CASE FOR THE SOLUTION<span class="anchor">#paradox</span></p>
+<p class="problem-impact-line"><strong>When future-ready capability is invisible, Dell pays twice:</strong> once in lost internal capacity and again in external hiring, slower ramp and higher cost.</p>
+</div><div class="body">
+<p class="lede"><strong>When future-ready capability is invisible, Dell pays twice:</strong> once in lost internal capacity and again in external hiring, slower ramp and higher cost.</p>
+<p>It happens in this order. An employee is ready to take on more, and one of two things blocks them. Either the role they want asks for experience they have never been allowed to do, because access to that work depends on their current title, their visibility or finding a sponsor — so they can neither build the experience nor prove they would be good at it. Or they already have that experience, from a previous role, a previous employer or a stretch project, and it has gone invisible: the organisation sees the job they are doing now, not the capability they already carry.</p>
+<div class="grid g2" data-glean-id="paradox-two">
+<div class="card rose" data-glean-id="paradox-case-a">
+<p class="k">CASE ONE · EXPERIENCE NEVER PERMITTED</p>
+<p>The requirement exists, the person does not have the experience, and the only route to getting it is a role they cannot reach without it. A closed door with the key on the other side.</p>
+</div>
+<div class="card rose" data-glean-id="paradox-case-b">
+<p class="k">CASE TWO · EXPERIENCE ALREADY HELD, NOW UNSEEN</p>
+<p>The capability is real but undocumented and unverified. Managers, HR and Talent Acquisition assess people on their current role, so prior and adjacent experience disappears the moment it stops being someone's job title.</p>
+</div>
+</div>
+<p>Both cases end the same way. The employee leaves to get the experience recognised, or stays and is passed over. Months later that role opens at Dell, nothing on record shows who inside Dell could already do the job, so the search goes outside — and Dell pays a premium to hire the experience it already had or recently let walk out the door.</p>
+<p>One failure sits underneath both: <strong>there is no way to make readiness for a role visible and verified before the vacancy exists</strong> — whether that readiness still has to be built, or is already there and simply cannot be seen.</p>
+</div></div>
+<div class="cost-chain" data-glean-id="paradox-figure">
+<div class="cost-node start">
+<span class="cost-no">01</span>
+<strong>Capability is hidden</strong>
+<small>already held or close enough to build</small>
+</div>
+<div class="cost-connector">→</div>
+<div class="cost-node">
+<span class="cost-no">02</span>
+<strong>Readiness cannot be proven</strong>
+<small>experience is gated by title, sponsorship or access</small>
+</div>
+<div class="cost-connector">→</div>
+<div class="cost-node risk">
+<span class="cost-no">03</span>
+<strong>Talent leaves or stays underused</strong>
+<small>productive capacity walks out or remains untapped</small>
+</div>
+<div class="cost-connector">→</div>
+<div class="cost-node end">
+<span class="cost-no">04</span>
+<strong>Dell buys it externally</strong>
+<small>higher cost + slower ramp + lost knowledge</small>
+</div>
+</div>
+</section>
+<section data-glean-id="solution" id="solution">
+<div class="section-intro"><div class="rail">
+<p class="tag">THE SOLUTION</p>
+<h2>A safe place to experience, practise and prove the future role before the vacancy exists.</h2>
+<p class="crit" data-glean-id="crit-solution">ANSWERS · SOLUTION AND DESIRED OUTCOME<span class="anchor">#solution</span></p>
+</div><div class="body">
+<p class="lede"><strong>Talent Incubator is one capability system with three connected views.</strong> It does not begin with a quiz and end with a score. It begins by modelling the role, lets the employee practise the work in multiple realistic environments, moves qualified participants into bounded real projects, and turns reviewed evidence into a time-bound readiness signal.</p>
+<p><strong>Role Simulation Studio:</strong> role experts, L&amp;D and business owners define the current-to-target role transition, critical activities, tool environment, scenario library, evidence standards, three human gates and Gate 3 validity.</p>
+<p><strong>Employee Talent Incubator:</strong> the participant experiences the role, receives AI coaching, completes evidenced gap practice, works with the target-role manager and team, and builds an inspectable Evidence Passport.</p>
+<p><strong>HR / Talent Intelligence:</strong> authorised users see demand versus supply, readiness cohorts, recurring capability gaps, project capacity, validation status and fairness indicators — never an AI hiring ranking.</p>
+</div></div>
+<div class="product-views">
+<article class="product-view builder-view"><span>PART 1</span><h3>Build the simulation</h3><p>Define the current role, target role, transferable capability, net-new tasks, Dell workflows, scenario formats, evidence thresholds, Gate 1–3 rules and validity period.</p></article>
+<article class="product-view employee-view"><span>PART 2</span><h3>Run the employee journey</h3><p>Practise across the complete role, receive task-specific AI feedback, close real gaps, prove transfer with the target-role team and keep practising even after validation.</p></article>
+<article class="product-view talent-view"><span>PART 3</span><h3>See capability supply</h3><p>Track exploring, simulation-ready, project-ready, active-validation and expired-validation cohorts, alongside recurring gaps and bounded project supply.</p></article>
+</div><div class="capability-pipeline" data-glean-id="pipeline-figure">
+<div class="pipeline-head">
+<div>
+<span class="pipeline-eyebrow">THE CAPABILITY PIPELINE</span>
+<h3>Build capability. Prove transfer. Validate readiness.</h3>
+</div>
+<p>The employee pipeline sits on top of a configurable role twin built by role experts and business owners.</p>
+</div>
+<div class="phase-lane build">
+<div class="phase-label">
+<span>PHASE 1</span>
+<strong>BUILD</strong>
+<small>Safe, adaptive role experience</small>
+</div>
+<div class="phase-content">
+<div class="phase-step"><b>01</b><div><strong>Build the role twin</strong><small>Map current → target capability, role activities, tools, scenarios, evidence standards and validity.</small></div></div>
+<div class="phase-step"><b>02</b><div><strong>Simulate the connected work</strong><small>Use AI conversations, branching workflows and sandboxed tool experiences — not questionnaires alone.</small></div></div>
+<div class="phase-step"><b>03</b><div><strong>Practise the exact gap</strong><small>AI coaching identifies what worked, what is missing, why it matters and the next evidenced variation.</small></div></div>
+</div>
+</div>
+<div class="phase-lane prove">
+<div class="phase-label">
+<span>PHASE 2</span>
+<strong>PROVE</strong>
+<small>Move safely into real work</small>
+</div>
+<div class="phase-content two">
+<div class="phase-step"><b>04</b><div><strong>Human project-readiness gate</strong><small>A role expert decides whether the employee may contribute within a named, supervised project scope.</small></div></div>
+<div class="phase-step live"><b>05</b><div><strong>Prove transfer with the real team</strong><small>The employee records the contribution; the target-role manager approves it or returns a specific practice gap.</small></div></div>
+</div>
+</div>
+<div class="phase-lane validate">
+<div class="phase-label">
+<span>PHASE 3</span>
+<strong>VALIDATE</strong>
+<small>Turn proof into visible talent supply</small>
+</div>
+<div class="phase-content one">
+<div class="phase-step final"><b>06</b><div><strong>Activate a time-bound passport</strong><small>Gate 3 is human-validated for 6 or 12 months. Practice stays open and cannot deactivate it before expiry.</small></div></div>
+</div>
+</div>
+<p class="pipeline-note"><strong>Build the role. Simulate the work. Practise the gap. Prove transfer with the real team. Validate readiness for a defined period — while keeping practice open.</strong></p>
+</div>
+<div class="solution-story" data-glean-id="solution-steps">
+<div class="story-row">
+<div class="story-index">01</div>
+<div class="story-title"><span>BUILD</span><h3>Create the complete role twin</h3></div>
+<p>Role experts define current-to-target capability, critical tasks, tools, scenario modalities, evidence standards, gates and a 6- or 12-month Gate 3 validity period.</p>
+</div>
+<div class="story-row">
+<div class="story-index">02</div>
+<div class="story-title"><span>SIMULATE + PRACTISE</span><h3>Use the work environment, not only questions</h3></div>
+<p>Employees practise through AI customer conversations, tool sandboxes, branching workflows and interactive gap labs. AI coaching explains what worked, what is missing, why a choice is weak and what to practise next.</p>
+</div>
+<div class="story-row accent">
+<div class="story-index">03</div>
+<div class="story-title"><span>PROVE IN REAL WORK</span><h3>Work with the target-role manager and team</h3></div>
+<p>After Gate 2, the employee completes a bounded Dell project, records the contribution and submits it for manager feedback. Approval creates reviewed real-project evidence; a return creates targeted practice and resubmission.</p>
+</div>
+<div class="story-row">
+<div class="story-index">04</div>
+<div class="story-title"><span>VALIDATE + MAINTAIN</span><h3>Make readiness visible without making it permanent</h3></div>
+<p>Gate 3 activates a time-bound Evidence Passport. The validation stays active until expiry, practice remains unlimited, and expired readiness requires refresh or revalidation while historical proof stays visible.</p>
+</div>
+</div>
+</section>
+<section data-glean-id="roleworld" id="roleworld">
+<div class="section-intro"><div class="rail">
+<p class="tag violet">ROLE SIMULATION ENVIRONMENT</p>
+<h2>A digital twin of the work — not a list of skills.</h2>
+<p class="crit">STRENGTHENS · INNOVATION · UX · FEASIBILITY<span class="anchor">#roleworld</span></p>
+</div><div class="body">
+<p class="lede"><strong>The simulation is the core innovation — and it represents the whole role.</strong> The prototype maps one concrete transition: <span class="hl-blue">Inside Sales Representative — CSG Commercial, APJ</span> to <span class="hl">AI Solutions Account Executive / AI Solution Seller</span>.</p>
+<p>The AI Solution Seller twin currently models <strong>14 role domains, 70 activities, 9 workflow environments, 14 connected scenario modules and 3 human decision gates</strong>. These figures describe the prototype configuration, not a universal requirement for every future role twin.</p>
+<p><strong>Simulation is not synonymous with multiple-choice questions.</strong> The experience combines AI customer conversations, branching role decisions, workflow simulations, tool-like sandboxes, evidence production and interactive remediation. Every modality is selected because it best matches the task being practised.</p>
+</div></div>
+<div class="prototype-role-case">
+<div class="role-transition"><span>CURRENT ROLE</span><strong>CSG Commercial Inside Sales Representative · APJ</strong><i>→</i><span>TARGET ROLE</span><strong>AI Solutions Account Executive / AI Solution Seller</strong></div>
+<div class="prototype-stats">
+<div><b>14</b><span>role domains</span></div><div><b>70</b><span>defined activities</span></div><div><b>9</b><span>workflow environments</span></div><div><b>14</b><span>connected scenarios</span></div><div><b>3</b><span>human gates</span></div>
+</div><div class="domain-coverage-strip"><span>Account &amp; territory planning</span><span>Prospecting &amp; cold calling</span><span>Discovery &amp; customer conversations</span><span>Qualification &amp; opportunity strategy</span><span>Product &amp; solution fit</span><span>Quote, pricing &amp; approvals</span><span>RFP / RFQ response</span><span>Specialist &amp; pod orchestration</span><span>Partner collaboration</span><span>CRM, pipeline &amp; forecast</span><span>Customer ownership &amp; escalation</span><span>Roadmap, QBR &amp; executives</span><span>KPIs &amp; operating cadence</span><span>Order, Services &amp; delivery handoff</span></div>
+<p><strong>One continuous synthetic case:</strong> HarborGrid carries the participant from cold call through discovery, solution fit, quoting, RFP, pod and partner orchestration, CRM/forecast, executive roadmap, escalation, KPI review, account planning and delivery handoff.</p>
+</div><div class="sim-core-panel">
+<div class="sim-core-copy">
+<span class="overline">WHY THE SIMULATION MATTERS</span>
+<h3>The simulation is where hidden capability becomes visible business evidence.</h3>
+<p><strong>Without the simulation,</strong> Dell still has learning, skills data and interviews — but no safe operating environment where employees can rehearse the future role, fail safely, close precise gaps and generate evidence strong enough to cross into real work.</p>
+</div>
+<div class="sim-core-points">
+<div><b>Fidelity</b><span>Models the real role, not a content library.</span></div>
+<div><b>Adaptation</b><span>AI changes stakeholders, difficulty and consequences.</span></div>
+<div><b>Evidence</b><span>Every attempt produces task-level proof, not a generic completion badge.</span></div>
+</div>
+</div>
+<div class="simulation-formats">
+<article><span>AI CUSTOMER CONVERSATION</span><h3>Speak until the call objective is achieved</h3><p>The cold-call simulation evaluates relevance, business outcome, question quality, partner handling and whether the employee earns the right next step.</p></article>
+<article><span>TOOL-LIKE SANDBOX</span><h3>Build the quote, not an answer about quoting</h3><p>The quote sandbox asks the employee to configure options, include services/support, manage discount authority and route the correct approval.</p></article>
+<article><span>WORKFLOW SIMULATION</span><h3>Operate the role across decisions and dependencies</h3><p>Discovery, qualification, RFP, specialist orchestration, partner collaboration, CRM/forecast, roadmap, escalation, KPI and handoff scenarios produce role evidence.</p></article>
+<article><span>INTERACTIVE GAP LAB</span><h3>Practise the failed task until evidence improves</h3><p>The employee selects actions, assigns owners and produces an artifact. Passing requires evidenced performance — never a “practice complete” click.</p></article>
+</div>
+<div class="ai-assistant-band"><div><span>AI PRACTICE ASSISTANT</span><h3>Feedback that explains the work, not only the score.</h3></div><p>For simulations, gap practice and project preparation, the assistant identifies <strong>what worked, what is missing, what to improve and why the decision or component does not fit the scenario</strong>. It coaches only; humans retain every gate and talent decision.</p></div>
+<div class="roleworld-layout" data-glean-id="roleworld-elements">
+<div class="roleworld-core">
+<span class="core-label">ROLE DIGITAL TWIN</span>
+<h3>Model the work, not the résumé.</h3>
+<p>Critical tasks, decisions, workflows, tools, standards, dependencies, common failure modes and evidence are modelled as one connected operating environment.</p>
+</div>
+<div class="roleworld-side top">
+<span>AI ROLE ACTORS</span>
+<h3>People behave differently.</h3>
+<p>Customers, managers and specialists vary by scenario, forcing adaptation instead of memorisation.</p>
+</div>
+<div class="roleworld-side middle">
+<span>CONSEQUENCE-BASED PRACTICE</span>
+<h3>Decisions change what happens next.</h3>
+<p>Weak choices create downstream friction, rework or harder stakeholder responses.</p>
+</div>
+<div class="roleworld-side bottom">
+<span>EVIDENCE PASSPORT</span>
+<h3>Evidence-backed status, not a completion badge.</h3>
+<p>The record states the task, context, evidence source, human reviewer, decision boundary and expiry. A project badge is awarded only after the target-role manager approves the contribution.</p>
+</div>
+</div>
+<div class="band" data-glean-id="experience-bridge-band">
+<p class="kick">THE EXPERIENCE BRIDGE</p>
+<p class="big">Simulation builds capability. The target-role team proves transfer. Human review activates time-bound readiness.</p>
+<p class="small">Gate 2 controls entry to supervised work. The participant records what was completed and submits it to the target-role manager. Approval creates reviewed project evidence; a return assigns targeted practice, revision and resubmission. Gate 3 then remains active for its configured validity period while practice stays open.</p>
+</div>
+<div class="experience-bridge" data-glean-id="experience-bridge-steps">
+<div class="bridge-item"><div class="bridge-dot">1</div><div class="bridge-copy"><span>GATE 1 · SIMULATION EVIDENCE</span><h3>Practise across multiple contexts</h3><p>Weak performance generates more practice and AI coaching — not a permanent label.</p></div></div>
+<div class="bridge-item"><div class="bridge-dot">2</div><div class="bridge-copy"><span>GATE 2 · HUMAN PROJECT-READINESS</span><h3>Approve a bounded contribution</h3><p>A role expert confirms the employee is ready to contribute under named scope, ownership and permissions.</p></div></div>
+<div class="bridge-item live"><div class="bridge-dot">3</div><div class="bridge-copy"><span>REAL DELL PROJECT</span><h3>Work with the target-role manager and team</h3><p>The employee performs real, bounded work, records the contribution and sends the evidence to the manager.</p></div></div>
+<div class="bridge-item"><div class="bridge-dot">4</div><div class="bridge-copy"><span>MANAGER FEEDBACK LOOP</span><h3>Approve or return with a practice gap</h3><p>Approved work earns reviewed project evidence. Returned work creates targeted practice, revision and resubmission.</p></div></div>
+<div class="bridge-item"><div class="bridge-dot">5</div><div class="bridge-copy"><span>GATE 3 · TIME-BOUND READINESS</span><h3>Activate the Evidence Passport</h3><p>Validation lasts 6 or 12 months. Historical evidence remains after expiry; current readiness must be refreshed.</p></div></div>
+</div>
+</section>
+<section data-glean-id="users" id="users">
+<div class="section-intro"><div class="rail">
+<p class="tag teal">END USER AND ORGANISATION</p>
+<h2 data-glean-id="enduser-headline">The end user is any Dell employee. Sales is where it starts.</h2>
+<p class="crit" data-glean-id="crit-users">ANSWERS · END USER AND ORGANISATION<span class="anchor">#users</span></p>
+</div><div class="body" data-glean-id="enduser-body">
+<p class="lede"><strong>Talent Incubator has three operational user groups and one shared evidence model.</strong> The end beneficiary is the Dell employee, but the product only works when role experts can build the twin, managers can validate real work, and HR/Talent can see capability supply without turning evidence into an AI ranking.</p>
+<p><strong>Sales is the first role family, not the ceiling.</strong> The prototype demonstrates CSG Inside Sales → AI Solution Seller because the work is observable and spans customer, commercial, technical and operating activity.</p>
+<p>The same configurable backbone can serve other role families: current-to-target mapping, critical tasks, tool environment, scenario formats, evidence rules, project path, validity period and authorised talent intelligence.</p>
+</div></div>
+<div class="operating-views">
+<article><span>ROLE EXPERT / L&amp;D / BUSINESS OWNER</span><h3>Role Simulation Studio</h3><p>Build and publish the role twin: current and target roles, domains, activities, tools, scenarios, evidence, Gate 1–3 rules and validity.</p></article>
+<article><span>EMPLOYEE + TARGET-ROLE MANAGER</span><h3>Talent Incubator journey</h3><p>Practise, receive AI coaching, complete real work, submit evidence, receive manager approval or rework, and maintain an active passport.</p></article>
+<article><span>HR / TALENT / WORKFORCE LEADER</span><h3>Capability-supply intelligence</h3><p>See demand, cohorts, active and expired validations, recurring gaps, project supply and fairness indicators. No AI ranking or automatic move.</p></article>
+</div><div class="grid g4" data-glean-id="stakeholders">
+<div class="card violet"><div class="k">ANY TEAM MEMBER · PRIMARY</div><h3>A future role they can actually practise</h3><p>A transparent current-to-target map, unlimited practice, AI coaching, real-project evidence and a time-bound readiness passport.</p></div>
+<div class="card teal"><div class="k">TARGET-ROLE MANAGER / PROJECT OWNER</div><h3>Prepared contributors and inspectable evidence</h3><p>Approve bounded work, return a specific practice gap, review resubmission and validate only the work the employee actually performed.</p></div>
+<div class="card blue"><div class="k">HR AND TALENT ACQUISITION</div><h3>A governed readiness supply view</h3><p>See exploring, simulation-ready, project-ready, active-validation and expired-validation cohorts before the search begins.</p></div>
+<div class="card green"><div class="k">BUSINESS / WORKFORCE LEADER</div><h3>Supply, gaps and project capacity ahead of demand</h3><p>See recurring capability gaps, where project supply is constrained and where build-versus-buy decisions are required.</p></div>
+</div>
+</section>
+<section class="impact" data-glean-id="impact-divider" id="impact">
+<div class="section-intro"><div class="rail">
+<p class="tag green">CRITERION · ONE ANSWER, THREE PARTS</p>
+<h2>Business impact.</h2>
+<p class="crit" data-glean-id="crit-impact">ANSWERS · BUSINESS IMPACT<span class="anchor">#impact</span><br/>spans #whynow, #value and #model</p>
+</div><div class="body">
+<p class="lede"><strong>Business impact is one story told in three moves.</strong></p>
+<p><strong>1. Why now:</strong> Dell is growing fast, protecting margin and hiring selectively — so internal capability becomes a business lever. <strong>2. Where the value comes from:</strong> the economics sit in recovered productivity, retained talent and avoided external premiums. <strong>3. What the model returns:</strong> a fully disclosed scenario model shows the upside while keeping measured Dell results separate from illustrative outputs.</p>
+</div><div aria-label="Business Impact sections" class="impact-subnav">
+<a href="#whynow"><span>01</span><strong>Why now</strong><small>The premise</small></a>
+<a href="#value"><span>02</span><strong>Value levers</strong><small>The mechanism</small></a>
+<a href="#model"><span>03</span><strong>Scenario model</strong><small>The numbers</small></a>
+</div></div>
+<div class="grid g3" data-glean-id="impact-map">
+<div class="card green"><div class="k">1 OF 3 · #WHYNOW</div><h3>The premise</h3><p>Dell's own FY2026 financials: revenue up 19% to $113.5B, roughly 10% fewer people, gross margin down 220 basis points.</p></div>
+<div class="card green"><div class="k">2 OF 3 · #VALUE</div><h3>The levers</h3><p>Four value levers, each anchored to a published external benchmark rather than to assertion, largest first.</p></div>
+<div class="card green"><div class="k">3 OF 3 · #MODEL</div><h3>The numbers</h3><p>$3.2M annualised against $350K, a 9x return, payback under two months, and $18M net across ten role families.</p></div>
+</div>
+</section>
+<section class="impact" data-glean-id="whynow" id="whynow">
+<div class="section-intro"><div class="rail">
+<p class="tag amber">WHY NOW</p>
+<h2>Dell's own numbers make internal capability a financial strategy.</h2>
+<p class="crit impact-step" data-glean-id="crit-whynow">ANSWERS · BUSINESS IMPACT<span class="anchor">#whynow</span><br/>1 of 3 · the premise</p>
+</div><div class="intro-copy"><p class="lede"><strong>FY2026 makes the timing visible.</strong> Dell finished the year at <span class="hl-blue">$113.5B revenue</span>, approximately <span class="hl-blue">97,000 employees</span> and <span class="hl-blue">20.0% gross margin</span>. That combination makes internal capability a capacity, speed and margin question — not only a talent question.</p></div></div>
+<div class="grid g3">
+<div class="card rose"><div class="k">THE SQUEEZE</div><h3>Revenue up, headcount down</h3><p>FY2026 net revenue grew 19% to $113.5B while headcount fell roughly 10% to about 97,000.<span class="tip" tabindex="0">i<span class="tiptext">Dell FY2026 annual report figures as reported in Dell FY2026 Form 10-K and FY2025 Form 10-K: net revenue $113.5B, up 19%; headcount about 97,000 at 30 January 2026, down 11,000 year on year.</span></span> Growth has to come from the people already here.</p></div>
+<div class="card amber"><div class="k">THE MARGIN PRESSURE</div><h3>Gross margin down 220bps</h3><p>Margin fell to 20.0% on the shift toward AI-optimised servers.<span class="tip" tabindex="0">i<span class="tiptext">Same FY2026 filings analysis: gross margin declined 220 basis points to 20.0%, attributed to mix shift toward AI-optimised servers.</span></span> Every avoidable hire premium and every slow ramp is now a margin event.</p></div>
+<div class="card blue"><div class="k">THE CAPABILITY GAP</div><h3>AI-role readiness takes time</h3><p>The Bridge Group’s 2026 study of 158 B2B companies reported a <strong>6.2-month average Account Executive ramp</strong>. This is external role-context evidence, not Dell’s own ramp curve or proof of hiring scarcity. <a class="evidence-ref" href="https://www.bridgegroupinc.com/research/2026-ae-models-motions-metrics" rel="noopener noreferrer" target="_blank">2026 original research ↗</a>.</p></div>
+</div><div class="evidence-strip">
+<a class="source-chip" href="https://investors.delltechnologies.com/sec-filings/all-sec-filings/content/0001571996-26-000008/dell-20260130.htm" rel="noopener noreferrer" target="_blank">Source: Dell FY2026 10-K</a>
+<a class="source-chip" href="https://investors.delltechnologies.com/news-events/press-releases/detail/93/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-2026-results" rel="noopener noreferrer" target="_blank">Source: Dell FY2026 earnings release</a>
+<span class="source-chip muted">All figures current as of FY ended 30 Jan 2026</span>
+</div>
+<div class="band" data-glean-id="reframe">
+<p class="kick">THE REFRAME</p>
+<p class="big">This is not a learning cost. It is a capacity and margin instrument.</p>
+<p class="small">Every month a validated internal candidate is productive sooner is a month of quota coverage, delivery capacity and margin Dell would otherwise have lost waiting for the market.</p>
+</div>
+</section>
+<section class="impact" data-glean-id="value" id="value">
+<div class="section-intro"><div class="rail">
+<p class="tag">WHERE THE VALUE COMES FROM</p>
+<h2>Four levers, each anchored to published evidence.</h2>
+<p class="crit impact-step" data-glean-id="crit-value">ANSWERS · BUSINESS IMPACT<span class="anchor">#value</span><br/>2 of 3 · the levers</p>
+</div><p class="sub"><strong>The economic case is led by recovered productive capacity and retained proven talent</strong>, rather than recruiting savings. Avoided recruiting spend is the smallest of the four monetised levers. Any contribution made during supervised projects is tracked separately and excluded until a non-duplicative valuation method is approved.</p></div>
+<div class="grid g4 lever-snapshot">
+<div class="card green"><div class="k">LEVER 01 · BIGGEST</div><h3>Recovered productive capacity</h3><p><strong>The largest lever.</strong> Capability shows up months earlier, so productive contribution starts earlier.</p></div>
+<div class="card violet"><div class="k">LEVER 02</div><h3>Retained proven talent</h3><p><strong>Visible internal growth paths retain people.</strong> Institutional knowledge stays inside Dell.</p></div>
+<div class="card teal"><div class="k">LEVER 03</div><h3>Avoided external pay premium</h3><p><strong>Buying scarce capability externally costs more.</strong> Promoting proven capability avoids that premium.</p></div>
+<div class="card amber"><div class="k">LEVER 04 · SMALLEST</div><h3>Avoided recruiting spend</h3><p><strong>The smallest lever.</strong> It still matters, but it is not the heart of the case.</p></div>
+</div>
+<div class="evidence-strip compact">
+<a class="source-chip" href="https://www.linkedin.com/business/talent/blog/talent-acquisition/how-internal-mobility-benefits-employers" rel="noopener noreferrer" target="_blank">LinkedIn internal mobility</a>
+<a class="source-chip" href="https://www.gallup.com/workplace/247391/employee-turnover-costs-200-percent-salary.aspx" rel="noopener noreferrer" target="_blank">Gallup turnover cost</a>
+<a class="source-chip" href="https://journals.sagepub.com/doi/abs/10.1177/0001839211433562" rel="noopener noreferrer" target="_blank">Bidwell external hire research</a>
+<a class="source-chip" href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" rel="noopener noreferrer" target="_blank">SHRM recruiting benchmarks</a>
+</div>
+<div class="t-scroll wide"><table data-glean-id="lever-table">
+<thead><tr><th>Lever</th><th>Mechanism</th><th>External benchmark</th><th>Dell input that replaces it</th></tr></thead>
+<tbody>
+<tr>
+<td><span class="mono">01 · LARGEST</span><br/><strong>Recovered productive capacity</strong></td>
+<td>A validated internal candidate has already practised the role and shipped real work, so they produce months earlier.</td>
+<td>The Bridge Group (2026) reports <strong>6.2 months average AE ramp</strong> from 158 B2B companies; this is a contextual benchmark, <strong>not</strong> Dell ramp and <strong>not</strong> a prediction of time saved. <a class="evidence-ref" href="https://www.bridgegroupinc.com/research/2026-ae-models-motions-metrics" rel="noopener noreferrer" target="_blank">Original research ↗</a>.</td>
+<td>Actual ramp curve and productive value per seat for the pilot role family.</td>
+</tr>
+<tr>
+<td><span class="mono">02</span><br/><strong>Avoided external pay premium</strong></td>
+<td>Promoting proven internal capability avoids the structural premium paid to buy the same capability outside.</td>
+<td>In a <strong>2011 study of a US financial-services organisation</strong>, external hires earned approximately <strong>18% more</strong> initially than comparable internal promotions, with lower early performance and higher exit rates. This is <strong>not a Dell-wide pay differential</strong>. <a class="evidence-ref" href="https://journals.sagepub.com/doi/abs/10.1177/0001839211433562" rel="noopener noreferrer" target="_blank">Original study ↗</a>.</td>
+<td>Average offer differential by job family.</td>
+</tr>
+<tr>
+<td><span class="mono">03</span><br/><strong>Retained proven talent</strong></td>
+<td>People who can prove and pursue a future internally stop looking for it externally, and the institutional knowledge stays.</td>
+<td>Gallup (2019) estimated employee replacement costs of <strong>50%–200% of annual salary</strong>. LinkedIn’s <strong>2024 company-level analysis</strong> found <strong>53% longer median tenure</strong> at companies with high versus low internal mobility; this is an association, not a causal prediction for Dell. <a class="evidence-ref" href="https://www.gallup.com/workplace/247391/employee-turnover-costs-200-percent-salary.aspx" rel="noopener noreferrer" target="_blank">Gallup ↗</a> <a class="evidence-ref" href="https://www.linkedin.com/business/talent/blog/talent-acquisition/how-internal-mobility-benefits-employers" rel="noopener noreferrer" target="_blank">LinkedIn ↗</a>.</td>
+<td>Regretted-attrition rate and loaded replacement cost for the pilot population.</td>
+</tr>
+<tr>
+<td><span class="mono">04 · SMALLEST</span><br/><strong>Avoided recruiting spend</strong></td>
+<td>Where validated internal supply exists, the search is narrowed or never launched.</td>
+<td>SHRM’s 2025 US-member survey reports average cost per hire of <strong>US$5,475 nonexecutive</strong> and <strong>US$35,879 executive</strong>. The model’s US$12,000 input is an <strong>independent scenario assumption, not a SHRM-weighted blend</strong>. <a class="evidence-ref" href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" rel="noopener noreferrer" target="_blank">Original release ↗</a>.</td>
+<td>Loaded cost per hire including agency fees.</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section class="impact" data-glean-id="model" id="model">
+<div class="section-intro"><div class="rail">
+<p class="tag violet">THE MODEL</p>
+<h2>One role family, three scenarios, every input disclosed.</h2>
+<p class="crit impact-step" data-glean-id="crit-model">ANSWERS · BUSINESS IMPACT<span class="anchor">#model</span><br/>3 of 3 · the numbers</p>
+</div><p class="sub"><strong>Conservative, Base and Ambitious are financial scenarios, not three role simulations.</strong> All figures below are <strong>illustrative model outputs</strong>, not measured Dell benefits. External facts, role-family placeholders and scenario assumptions are separated below. Costs and returns require Dell Finance validation before any investment claim.</p></div>
+<div class="financial-inputs" data-glean-id="financial-inputs"><h3>Model inputs — external evidence vs. assumptions</h3><p class="cap">Model inputs are stated in US dollars for consistency. No salary, cost-per-hire, role volume, validation lift or participant size is a measured Dell role-family baseline.</p>
+<div class="t-scroll"><table data-glean-id="assumption-register"><thead><tr><th>Input</th><th>Value in model</th><th>Provenance / required validation</th></tr></thead><tbody>
+<tr><td>Role-family annual fills</td><td>120</td><td>Scenario assumption. Replace with Dell Talent Acquisition actuals.</td></tr>
+<tr><td>Current internal fill</td><td>35%</td><td>Scenario assumption. Obtain Dell role-family baseline.</td></tr>
+<tr><td>Conservative / Base / Ambitious internal fill</td><td>45% / 55% / 65%</td><td>Scenario assumptions, not forecast outcomes.</td></tr>
+<tr><td>Ramp time recovered vs. comparison cohort</td><td>2 / 3 / 4 months</td><td>Scenario assumptions. External context: <a href="https://www.bridgegroupinc.com/research/2026-ae-models-motions-metrics" rel="noopener" target="_blank">Bridge Group 2026, 6.2-month average AE ramp</a>. No Dell-specific acceleration measured.</td></tr>
+<tr><td>Productivity valuation proxy</td><td>US$19,500 per month</td><td>Illustrative corporate gross-margin-per-employee proxy: US$113.538B FY26 net revenue / ~97,000 FY26 employees × 20.0% gross margin / 12 ≈ US$19,508. It is <strong>not a validated seller contribution, not quota value and not incremental revenue</strong>. Replace with Dell Finance-approved incremental contribution per role.</td></tr>
+<tr><td>Reference salary</td><td>US$130,000</td><td>Scenario assumption, not a verified Dell midpoint.</td></tr>
+<tr><td>External pay premium</td><td>18%</td><td>Assumed from <a href="https://journals.sagepub.com/doi/abs/10.1177/0001839211433562" rel="noopener" target="_blank">Bidwell (2011)</a> in one US financial-services employer; validate locally.</td></tr>
+<tr><td>Participation pool</td><td>500 employees</td><td>Scenario assumption; not the proposed 90-day approved pilot size.</td></tr>
+<tr><td>Regretted attrition avoided</td><td>1 / 2 / 3 percentage points</td><td>Scenario assumptions, <strong>not derived</strong> from the <a href="https://www.linkedin.com/business/talent/blog/talent-acquisition/how-internal-mobility-benefits-employers" rel="noopener" target="_blank">LinkedIn 53% tenure association</a>.</td></tr>
+<tr><td>Replacement cost factor</td><td>75% of assumed salary</td><td>Scenario assumption within <a href="https://www.gallup.com/workplace/247391/employee-turnover-costs-200-percent-salary.aspx" rel="noopener" target="_blank">Gallup’s 2019 estimate of 50–200%</a>; no Dell cost data available.</td></tr>
+<tr><td>Recruiting cost per incremental internal fill</td><td>US$12,000</td><td>Scenario assumption, <strong>not calculated by blending SHRM averages</strong>. US-based SHRM 2025 average benchmarks: US$5,475 nonexecutive and US$35,879 executive.</td></tr>
+<tr><td>90-day pilot cost / model cost input</td><td>US$350,000</td><td>Unapproved scenario placeholder. The full first-year and recurring operating costs, including AI consumption, infrastructure, reviewer time and maintenance, have <strong>not</strong> been established.</td></tr>
+<tr><td>Ten-family scale factor</td><td>10 families × 70% of single-family gross value</td><td>Explicit illustrative assumption, not demonstrated reuse or realised efficiency.</td></tr>
+<tr><td>Ten-family annual operating cost</td><td>US$4.5M</td><td>Unapproved illustrative placeholder; requires Finance and platform-owner costing.</td></tr>
+</tbody></table></div>
+<div class="formula-notes"><h3>Reproducible calculation method</h3>
+<p><strong>Incremental fills</strong> = 120 × (scenario internal-fill rate − 35%). <strong>Recovered capacity</strong> = incremental fills × assumed months saved × US$19,500 illustrative monthly proxy. <strong>Retention</strong> = 500 × avoided-attrition percentage-point scenario × US$130,000 × 75%. <strong>Pay premium</strong> = incremental fills × US$130,000 × 18%. <strong>Recruiting</strong> = incremental fills × US$12,000.</p>
+<p><strong>Gross</strong> = sum of four monetised levers. <strong>Net</strong> = gross − assumed US$350,000 programme cost. <strong>Gross-value/cost multiple</strong> = gross ÷ assumed cost. <strong>Indicative payback</strong> = assumed cost ÷ (annualised gross ÷ 12). The payback illustration assumes an immediate, flat monthly benefit run rate and omits delivery/benefit ramp; it is <strong>not an observed cash payback or audited investment ROI</strong>.</p>
+<p><strong>Ten-role-family scaling</strong> = one-family scenario gross × 10 × 70%, less an assumed US$4.5M annual operating cost. This does not establish that 70% is achievable or the operating budget sufficient. The 90-day pilot must establish actual cost and value baselines; unapproved inputs are not reported outcomes.</p>
+</div><div class="nonmonetised-controls"><strong>Separate, unmonetised pilot measures:</strong> reduced vacancy/failed-hire decision risk, supervised project contribution, freshness of role-readiness evidence, participant fluency and manager decision quality. None is included in the four-lever financial total.</div>
+</div><div class="t-scroll wide"><table data-glean-id="scenario-table">
+<thead><tr><th>Modelled annual value</th><th class="num">Conservative</th><th class="num">Base</th><th class="num">Ambitious</th></tr></thead>
+<tbody>
+<tr><td>Internal fill rate, from a 35% baseline<span class="tip" tabindex="0">i<span class="tiptext">Baseline internal fill rate of 35% and scope of 120 roles filled per year are placeholders pending Dell talent acquisition data for the pilot role family.</span></span></td><td class="num">45%</td><td class="num">55%</td><td class="num">65%</td></tr>
+<tr><td>Incremental internal fills</td><td class="num">12</td><td class="num">24</td><td class="num">36</td></tr>
+<tr><td>Recovered productive capacity<span class="tip" tabindex="0">i<span class="tiptext">US$19,500 is a scenario valuation proxy derived from Dell FY2026 enterprise gross margin per employee. It does not measure the incremental margin from an AI Solution Seller, quota attainment or the cost of vacancy. Finance must replace this proxy with role-specific evidence.</span></span></td><td class="num">$468,000</td><td class="num">$1,404,000</td><td class="num">$2,808,000</td></tr>
+<tr><td>Retained proven talent<span class="tip" tabindex="0">i<span class="tiptext">The 500 participants, 1/2/3 percentage points of avoided attrition, US$130,000 salary and 75% replacement-cost factor are illustrative inputs. Gallup’s published replacement-cost range is 50%–200%; 75% is within that range, not its low end.</span></span></td><td class="num">$487,500</td><td class="num">$975,000</td><td class="num">$1,462,500</td></tr>
+<tr><td>Avoided external pay premium</td><td class="num">$280,800</td><td class="num">$561,600</td><td class="num">$842,400</td></tr>
+<tr><td>Avoided recruiting spend</td><td class="num">$144,000</td><td class="num">$288,000</td><td class="num">$432,000</td></tr>
+<tr class="total"><td>Gross annual value</td><td class="num">$1.38M</td><td class="num">$3.23M</td><td class="num">$5.54M</td></tr>
+<tr><td>Programme cost<span class="tip" tabindex="0">i<span class="tiptext">US$350,000 is an unapproved illustrative 90-day pilot cost. An audited first-year ROI requires full build and recurring operations, model inference, review, infrastructure and maintenance costs to be measured. Gross-value/cost multiples shown here are scenarios only.</span></span></td><td class="num">($350,000)</td><td class="num">($350,000)</td><td class="num">($350,000)</td></tr>
+<tr class="total"><td>Net annual value</td><td class="num">$1.03M</td><td class="num">$2.88M</td><td class="num">$5.19M</td></tr>
+<tr><td>Return on cost · payback</td><td class="num">3.9x · 3.0 mo</td><td class="num">9.2x · 1.3 mo</td><td class="num">15.8x · 0.8 mo</td></tr>
+</tbody>
+</table></div>
+<div class="stack" data-glean-id="value-stack">
+<div class="srow"><div class="nm">Conservative</div><div class="bar">
+<div class="seg ramp" style="flex:468">$468K</div><div class="seg ret" style="flex:487">$488K</div><div class="seg prem" style="flex:281">$281K</div><div class="seg cph" style="flex:144">$144K</div></div></div>
+<div class="srow"><div class="nm">Base</div><div class="bar">
+<div class="seg ramp" style="flex:1404">$1.40M</div><div class="seg ret" style="flex:975">$975K</div><div class="seg prem" style="flex:562">$562K</div><div class="seg cph" style="flex:288">$288K</div></div></div>
+<div class="srow"><div class="nm">Ambitious</div><div class="bar">
+<div class="seg ramp" style="flex:2808">$2.81M</div><div class="seg ret" style="flex:1463">$1.46M</div><div class="seg prem" style="flex:842">$842K</div><div class="seg cph" style="flex:432">$432K</div></div></div>
+<div class="legend">
+<span><i class="dot ramp"></i>Recovered capacity</span><span><i class="dot ret"></i>Retained talent</span>
+<span><i class="dot prem"></i>Avoided pay premium</span><span><i class="dot cph"></i>Avoided recruiting</span>
+</div>
+</div><div class="scale-model-in-impact"><h3>Illustrative ten-role-family expansion</h3><p class="cap">Ten configurable role families × 70% of the one-role-family scenario gross value, less US$4.5M assumed annual operating cost. These inputs are planning sensitivities, not validation of deployment economics.</p><div class="t-scroll wide"><table data-glean-id="scale-table">
+<thead><tr><th>Ten role families, globally</th><th class="num">Gross annual value</th><th class="num">Operating cost</th><th class="num">Net annual value</th><th class="num">Return</th></tr></thead>
+<tbody>
+<tr><td>Conservative</td><td class="num">$9.7M</td><td class="num">$4.5M</td><td class="num">$5.2M</td><td class="num">2.1x</td></tr>
+<tr><td>Base</td><td class="num">$22.6M</td><td class="num">$4.5M</td><td class="num">$18.1M</td><td class="num">5.0x</td></tr>
+<tr><td>Ambitious</td><td class="num">$38.8M</td><td class="num">$4.5M</td><td class="num">$34.3M</td><td class="num">8.6x</td></tr>
+</tbody>
+</table></div></div>
+<div class="body" style="margin-top:var(--block)">
+<p>Double counting is controlled: capacity value is counted once per incremental internal fill, retention value is counted on the participant pool rather than on fills, and no lever appears in more than one line. No figure will be claimed as a Dell result until it is measured against the pre-pilot baseline.</p>
+</div>
+</section>
+<section data-glean-id="innovation" id="innovation">
+<div class="section-intro innovation-intro"><div class="rail">
+<p class="tag violet">THE INNOVATION</p>
+<h2>A reversal of sequence, not another tool.</h2>
+<p class="crit" data-glean-id="crit-innovation">ANSWERS · INNOVATION<span class="anchor">#innovation</span></p>
+</div><div class="band" data-glean-id="category-band">
+<p class="kick">A NEW CATEGORY</p>
+<p class="big">Readiness before requisition.</p>
+<p class="small">Every existing capability activates after demand appears. Talent Incubator creates and validates capability before the vacancy exists, then lets people practise, improve and prove rather than be scored once.</p>
+</div></div>
+<div class="innovation-timeline" data-glean-id="sequence-figure">
+<div class="timeline-track reactive">
+<div class="timeline-label"><span>TODAY</span><strong>Reactive</strong></div>
+<div class="timeline-step"><b>01</b><span>Vacancy opens</span></div>
+<div class="timeline-step"><b>02</b><span>Urgent search</span></div>
+<div class="timeline-step"><b>03</b><span>External hire</span></div>
+<div class="timeline-step cost"><b>04</b><span>Cost + delay</span></div>
+</div>
+<div class="timeline-flip"><span>THE SEQUENCE FLIP</span><strong>Move proof before demand.</strong></div>
+<div class="timeline-track proactive">
+<div class="timeline-label"><span>TALENT INCUBATOR</span><strong>Ahead of demand</strong></div>
+<div class="timeline-step"><b>01</b><span>Test-drive role</span></div>
+<div class="timeline-step"><b>02</b><span>Build real proof</span></div>
+<div class="timeline-step"><b>03</b><span>Readiness visible</span></div>
+<div class="timeline-step win"><b>04</b><span>Internal supply ready</span></div>
+</div>
+<p class="timeline-caption"><strong>The invention is not another assessment.</strong> It changes <em>when</em> capability is built and proven.</p>
+</div>
+<div class="t-scroll"><table data-glean-id="negative-space">
+<thead><tr><th>Existing capability</th><th>What it can establish</th><th>What Talent Incubator adds</th></tr></thead>
+<tbody>
+<tr><td><strong>Learning platform</strong></td><td>What someone completed</td><td>What someone can perform</td></tr>
+<tr><td><strong>Skills profile</strong></td><td>Claimed or inferred capability</td><td>Task-level evidence from real work</td></tr>
+<tr><td><strong>Talent marketplace</strong></td><td>Matching once an opening exists</td><td>Readiness built before the opening</td></tr>
+<tr><td><strong>Traditional assessment</strong></td><td>A score at one fixed moment</td><td>Practise, improve, then prove</td></tr>
+</tbody>
+</table></div>
+<div class="grid g4">
+<div class="card violet"><div class="k">NOVELTY 01</div><h3>A configurable role-twin builder</h3><p>The product models the transition from a current role to a target role, including transferable capability, net-new activities, tools, scenarios, evidence standards, three gates and validity.</p></div>
+<div class="card violet"><div class="k">NOVELTY 02</div><h3>Simulation modality matches the task</h3><p>Cold calls use AI customer conversation; quoting uses a tool-like sandbox; RFP, discovery, CRM and roadmaps use workflow and decision simulations. It is not a questionnaire library.</p></div>
+<div class="card violet"><div class="k">NOVELTY 03</div><h3>Failure creates evidenced practice and a manager loop</h3><p>AI feedback generates the next practice variation. Real-project evidence is approved by the target-role manager or returned with a specific gap for practice and resubmission.</p></div>
+<div class="card violet"><div class="k">NOVELTY 04</div><h3>Readiness is visible, time-bound and useful at enterprise scale</h3><p>Gate 3 remains active for 6 or 12 months while practice continues. Active and expired evidence feeds authorised capability-supply intelligence without becoming an AI employment ranking.</p></div>
+</div>
+<div class="body" style="margin-top:var(--block)">
+<p class="lede"><strong>This is the sequence flip that changes the economics.</strong></p>
+<p>Most systems activate <strong>after demand appears</strong>: learn after the gap, assess after the vacancy, search after the urgency. <span class="hl">Talent Incubator moves proof to the front of the timeline</span>. The same talent builds readiness, generates evidence and becomes visible internal supply <strong>before</strong> the requisition opens.</p>
+<p><strong>That is why this section matters.</strong> It is the “holy grail” of the concept: not just a better learning flow, but a new operating sequence that turns hidden internal capability into a business asset.</p>
+</div>
+</section>
+<section data-glean-id="feasibility" id="feasibility">
+<div class="section-intro"><div class="rail">
+<p class="tag teal">FEASIBILITY</p>
+<h2>The strongest feasibility argument is that the pilot can be bounded without weakening the model.</h2>
+<p class="crit" data-glean-id="crit-feasibility">ANSWERS · FEASIBILITY AND SOLUTION READINESS<span class="anchor">#feasibility</span></p>
+</div><div class="body" style="margin-top:var(--block)">
+<p class="lede"><strong>The V2 prototype now demonstrates the complete operating model with synthetic data.</strong> It includes the Role Simulation Studio, Employee Journey and HR / Talent view; a current-to-target role map; mixed simulation formats; interactive gap practice; AI coaching; manager approval/rework; project evidence; time-bound validation and active/expired passport states.</p>
+<p><strong>Scope remains the control.</strong> The prototype is not a production Dell system, does not certify tool integration and makes no employment decision. A pilot can begin with one role family, synthetic or approved data, one region, named role experts, target-role managers and bounded project supply.</p>
+<p><strong>The prototype reduces concept risk, not implementation governance.</strong> Production use still requires approved environments, access, data ownership, integration, security, privacy, measurement definitions and accountable human owners.</p>
+</div></div>
+<div class="grid g2">
+<div class="card teal"><div class="k">ALREADY EXISTS AT DELL</div>
+<ul>
+<li>Approved role content and workflows</li>
+<li>Learning and skills capabilities</li>
+<li>Talent profile and internal opportunity flows</li>
+<li>Project and work-sample channels</li>
+</ul>
+</div>
+<div class="card blue"><div class="k">WHAT TALENT INCUBATOR ADDS</div>
+<ul>
+<li>Role Simulation Studio: current-to-target blueprint, activities, tools, scenarios, evidence rules and validity</li>
+<li>Employee experience: AI conversations, workflow simulations, quote sandbox, interactive gap labs and AI coaching</li>
+<li>Experience Bridge: human-gated project access, target-role manager review, rework and resubmission</li>
+<li>Evidence layer: simulation, gap-practice and approved real-project proof with reviewer and expiry</li>
+<li>HR / Talent view: readiness cohorts, recurring gaps, project supply, active/expired status and fairness indicators</li>
+<li>No new system of record is required for the first supervised pilot</li>
+</ul>
+</div>
+</div>
+<div class="prototype-proof-grid">
+<article><span>EXISTS IN V2</span><h3>Builder</h3><p>Role blueprint, 14 domains, 70 activities, 9 workflow environments, 14 scenarios, three gates and validity configuration.</p></article>
+<article><span>EXISTS IN V2</span><h3>Employee workflow</h3><p>AI conversation, quote sandbox, branching scenarios, evidenced gap practice, AI assistant, project manager loop and passport.</p></article>
+<article><span>EXISTS IN V2</span><h3>HR / Talent view</h3><p>Supply funnel, evidence cohorts, gap heatmap, project supply, active/expired validation and fairness guardrails.</p></article>
+</div>
+<p class="prototype-boundary"><strong>Prototype boundary:</strong> HarborGrid, participants, metrics, project and outcomes are synthetic. The prototype validates workflow coherence and interaction design; it does not prove a deployed Dell integration or measured business result.</p>
+<div class="steps" data-glean-id="ninety-days">
+<div class="step s1"><div class="n">DAYS 1–15</div><h3>Define the role twin and validity</h3><p>Confirm sponsor, current and target roles, critical activities, transferable capability, evidence standards, baseline, project owners and whether Gate 3 lasts 6 or 12 months.</p></div>
+<div class="step s2"><div class="n">DAYS 16–30</div><h3>Configure the builder, simulations and controls</h3><p>Map tools to tasks, create scenario modalities, set AI coaching boundaries, publish Gate 1–3 criteria, privacy, appeal and project-access rules.</p></div>
+<div class="step s3"><div class="n">DAYS 31–60</div><h3>Run employee and manager workflows</h3><p>Test the full role journey, interactive gap practice, target-role team project contribution, manager approval/rework and passport evidence.</p></div>
+<div class="step s4"><div class="n">DAYS 61–90</div><h3>Test Talent Intelligence and decide</h3><p>Measure usability, evidence quality, manager effort, project capacity, fairness, baseline impact and the scale, refine or stop decision.</p></div>
+</div>
+</section>
+<section data-glean-id="scale" id="scale">
+<div class="section-intro scale-intro"><div class="rail">
+<p class="tag">SCALE AND ADOPTION</p>
+<h2>A global backbone with local reality.</h2>
+<p class="crit" data-glean-id="crit-scale">ANSWERS · SCALABILITY AND ADOPTION<span class="anchor">#scale</span></p>
+</div><div class="intro-copy">
+<p class="sub"><strong>Scale the builder and evidence model; localise the role twin.</strong> The reusable backbone is the current-to-target blueprint, activity/evidence schema, simulation formats, AI coaching pattern, Gate 1–3 governance, manager feedback loop, passport status and Talent Intelligence views.</p>
+<div class="body"><p><strong>Local teams configure the role.</strong> Activities, tools, scenario content, language, project supply, permissions, evidence standards and Gate 3 validity may differ by role family and geography.</p><p><strong>At scale, readiness evidence becomes capability-supply intelligence.</strong> Dell can distinguish active validation from expired evidence, see recurring gaps, identify project-capacity constraints and decide where internal supply can be created before external demand forces a buy decision.</p></div>
+</div></div>
+
+
+<div class="grid g4" data-glean-id="adoption">
+<div class="card violet"><div class="k">ADOPTION · EMPLOYEE</div><h3>Unlimited practice and transparent validity</h3><p>Practise before or after Gate 3; active validation remains until expiry and historical evidence remains inspectable.</p></div>
+<div class="card teal"><div class="k">ADOPTION · ROLE EXPERT / MANAGER</div><h3>A governed builder and feedback loop</h3><p>Configure the role standard, approve project access, review work and return precise gaps instead of vague rejection.</p></div>
+<div class="card blue"><div class="k">ADOPTION · HR / TALENT</div><h3>Cohorts and evidence currency</h3><p>See developing, simulation-ready, project-ready, active and expired states without turning evidence into an AI ranking.</p></div>
+<div class="card green"><div class="k">ADOPTION · LEADER</div><h3>Capability supply and project capacity</h3><p>See where talent can be built, which gaps recur and where more bounded projects or external hiring are still required.</p></div>
+</div>
+</section>
+<section data-glean-id="experience" id="experience">
+<div class="section-intro"><div class="rail">
+<p class="tag amber">EXPERIENCE AND SIMPLICITY</p>
+<h2>One journey. Open exploration. Controlled transition to real work.</h2>
+<p class="crit" data-glean-id="crit-experience">ANSWERS · USER EXPERIENCE AND SIMPLICITY<span class="anchor">#experience</span></p>
+</div><div class="body">
+<p class="lede"><strong>One journey, three gates and continuous practice.</strong> Exploration and simulation are open; real work and talent decisions are human-controlled.</p>
+<p>The employee sees the current role, target role, capability map, target standard, scenario library, evidence captured, exact gaps and the next experience. Simulation formats match the task: AI conversation, tool sandbox, workflow decision or interactive practice lab.</p>
+<p><strong>The AI Practice Assistant gives developmental feedback</strong> on what worked, what is missing, what to improve and why a decision or component does not fit. It cannot approve Gate 2, Gate 3, project evidence or an employment decision.</p>
+<p><strong>Practice never closes.</strong> An employee may continue practising after Gate 3. Active validation remains valid until its 6- or 12-month expiry; after expiry, historical evidence stays visible and current readiness must be refreshed.</p>
+</div></div>
+<div class="ux-principles" data-glean-id="ux-rules">
+<div class="ux-strip"><div class="ux-icon">01</div><div><span>OPEN EXPLORATION</span><h3>No permission to test-drive the role</h3><p>Employees can inspect the current-to-target map and run simulations without a vacancy, sponsor or nomination.</p></div><div><span>RIGHT SIMULATION FOR THE TASK</span><h3>Not a questionnaire library</h3><p>Conversations, tool sandboxes, workflows and decision scenarios are used according to the task being practised.</p></div></div>
+<div class="ux-strip"><div class="ux-icon">02</div><div><span>REAL GAP PRACTICE</span><h3>Performance, not a “complete” button</h3><p>The participant selects actions, assigns owners and produces evidence against a pass standard; failed attempts generate a new variation.</p></div><div><span>AI PRACTICE ASSISTANT</span><h3>Explain what, why and next</h3><p>Feedback identifies strengths, missing elements, weak component choices and the precise next practice action.</p></div></div>
+<div class="ux-strip"><div class="ux-icon">03</div><div><span>CONTROLLED PRODUCTION</span><h3>Work with the real target-role team</h3><p>Gate 2 unlocks a bounded contribution with a named manager, team, scope, timebox, permissions and deliverables.</p></div><div><span>MANAGER FEEDBACK LOOP</span><h3>Approve or return with a specific gap</h3><p>Approval creates real-project evidence; return assigns practice, followed by revision and resubmission.</p></div></div>
+<div class="ux-strip"><div class="ux-icon">04</div><div><span>TIME-BOUND PASSPORT</span><h3>Active for 6 months or 1 year</h3><p>The builder sets validity. The passport shows reviewer, evidence, date and expiry; it never implies guaranteed selection.</p></div><div><span>CONTINUOUS PRACTICE</span><h3>Validation remains active until expiry</h3><p>Repeating practice adds evidence and maintains fluency without deactivating an already active Gate 3 validation.</p></div></div>
+</div>
+</section>
+<section data-glean-id="trust" id="trust">
+<div class="section-intro"><div class="rail">
+<p class="tag">GUARDRAILS</p>
+<h2>Innovation that earns the right to scale.</h2>
+<p class="crit" data-glean-id="crit-trust">ANSWERS · ADDITIONAL DETAILS · GUARDRAILS AND WIA<span class="anchor">#trust</span></p>
+</div><div class="trust-banner">
+<span>THE SCALE GATE</span>
+<strong>Bold enough to matter. Governed enough to trust.</strong>
+<p>Human decisions, inspectable evidence, bounded production access and a clear path to correction are what make the innovation scalable.</p>
+</div><div class="body" style="margin-top:var(--block)">
+<p class="lede"><strong>This is the section that earns the right to scale.</strong></p>
+<p>The experience gate falls hardest on people whose capability is not already visible to a sponsor. Replacing sponsorship with <strong>provable, inspectable evidence</strong> is a structural equity change, not only a programme feature — which is why this idea belongs in Women in Action.</p>
+<p><strong>Innovation becomes defensible only when it is governable.</strong> Human decision rights, relevance, privacy, transparency, recourse and bounded real-project access are what turn a bold concept into one leaders can responsibly expand.</p>
+</div></div>
+<div class="grid g3" data-glean-id="guardrails">
+<div class="card blue"><div class="k">DECISIONS</div><h3>Human, always</h3><p>AI does not approve gates, projects, badges, promotions, hiring, ranking or movement.</p></div>
+<div class="card blue"><div class="k">AI ASSISTANT</div><h3>Coaching only</h3><p>The assistant can explain work, gaps and next practice. Role experts and managers retain every consequential decision.</p></div>
+<div class="card blue"><div class="k">RELEVANCE</div><h3>Job-related evidence</h3><p>Role experts approve activities, scenario content, evidence standards and validity for each role twin.</p></div>
+<div class="card blue"><div class="k">PRIVACY</div><h3>Submitted evidence only</h3><p>No private messages, background surveillance or continuous productivity monitoring.</p></div>
+<div class="card blue"><div class="k">TRACEABILITY</div><h3>Source, context, reviewer and expiry</h3><p>Every meaningful evidence signal states what was demonstrated, where, who reviewed it and when it expires.</p></div>
+<div class="card blue"><div class="k">RECOURSE</div><h3>Inspect, correct and appeal</h3><p>Employees can review evidence, add context, challenge an error and request reassessment or revalidation.</p></div>
+<div class="card blue"><div class="k">REAL PROJECTS</div><h3>Bounded production access</h3><p>A human gate, named manager, scoped permissions, supervision and return-to-practice loop protect employee and business.</p></div>
+<div class="card blue"><div class="k">EVIDENCE CURRENCY</div><h3>No permanent readiness label</h3><p>Gate 3 lasts 6 or 12 months. Expired evidence remains historical but cannot be presented as current validated readiness.</p></div>
+<div class="card blue"><div class="k">TALENT INTELLIGENCE</div><h3>No AI ranking</h3><p>HR/Talent sees permissioned cohorts, gaps, project supply and validation status — not an automated employment decision.</p></div>
+</div>
+</section>
+<section id="tokenomics" data-glean-id="tokenomics">
+<div class="section-intro"><div class="rail"><p class="tag teal">AI CONSUMPTION EFFICIENCY</p><h2>Make each AI interaction earn its cost.</h2><p class="crit">OPERATING EFFICIENCY · PROPOSED DESIGN PRINCIPLES</p></div><div class="body"><p class="lede"><strong>Use AI where it makes practice better; use simpler workflows where it does not.</strong> Talent Incubator is designed to measure AI consumption as part of the pilot rather than assume that each interaction requires an expensive model call.</p><p>Adaptive customer conversations, targeted coaching and unfamiliar scenario variations are good candidates for inference. Fixed task standards, eligibility rules, project permissions, pass/fail arithmetic and validity dates can use <strong>deterministic controls</strong>, with human approval at consequential gates.</p><p>Where supported by an approved implementation, reviewed context, reusable prompts, retrieval or caching may reduce unnecessary repeated processing. Model selection should be matched to task complexity and output quality requirements rather than always defaulting to the largest model. These are <strong>design options to test</strong>, not claims about Dell’s existing platform.</p></div></div>
+<div class="grid g3"><div class="card teal"><div class="k">MATCH THE METHOD</div><h3>Inference only when it adds value</h3><p>Conversation, variation and qualitative coaching use reviewed AI patterns. Fixed rules and validation expiry do not need continuous inference.</p></div><div class="card blue"><div class="k">CONTROL THE CONTEXT</div><h3>Reuse approved inputs carefully</h3><p>Avoid redundant scenario generation and repeated full-context processing where approved retrieval, templates or caching are appropriate.</p></div><div class="card violet"><div class="k">MEASURE BEFORE SCALING</div><h3>Understand unit economics</h3><p>Record permitted usage and full cost per simulation, passed practice, participant and role family, alongside human-review effort and quality.</p></div></div>
+<p class="cap">The proposed 90-day pilot will establish a Dell-approved consumption and operating-cost baseline. No internal token price, model entitlement, infrastructure cost or saving is assumed in this proposal.</p></section>
+<section id="reusability" data-glean-id="reusability">
+<div class="section-intro"><div class="rail"><p class="tag violet">REUSABILITY &amp; SCALE ARCHITECTURE</p><h2>Reuse the engine. Configure the role.</h2><p class="crit">SCALABILITY · IMPLEMENTATION · MAINTAINABILITY</p></div><div class="body"><p class="lede"><strong>Scale comes from a shared Talent Incubator framework, not rebuilding a separate platform for each role family.</strong> The Role Simulation Studio defines the variable role content while governance, evidence capture, review and employee experiences follow reusable patterns.</p><p>This separation supports repeatable deployment, consistent decision rights and updates to a single role component when AI changes the job. Additional role families still need accountable experts and local approval; reuse is a design strategy, <strong>not a quantified saving or a promised reuse rate</strong>.</p></div></div>
+<div class="grid g2 reusable-architecture"><div class="card blue"><div class="k">REUSABLE BACKBONE · SHARED PRODUCT</div><h3>Components reused across role families</h3><ul><li>Role Simulation Studio framework and current → target role schema</li><li>Activity/evidence models and scenario templates</li><li>AI coaching pattern and reusable conversation, decision, workflow and sandbox modalities</li><li>Evidence Passport, active/expired logic and Gate 1–3 structure</li><li>Manager feedback, return-to-practice and resubmission loop</li><li>HR/Talent intelligence views, governance, analytics and monitoring patterns</li></ul></div><div class="card violet"><div class="k">ROLE-SPECIFIC CONFIGURATION · LOCAL OWNER</div><h3>Content that changes when the role changes</h3><ul><li>Role activities, product expertise and target standards</li><li>Tools, approved workflows, scenarios and stakeholder behaviour</li><li>Language, geography and local operating context</li><li>Evidence requirements, task thresholds and human-review criteria</li><li>Project opportunities, access permissions and team ownership</li><li>Validation period (6 or 12 months where approved) and refresh triggers</li></ul></div></div>
+<div class="band"><p class="kick">THE SCALE PRINCIPLE</p><p class="big">Extend the role model; do not rebuild the product.</p><p class="small">Version and maintain task-level components. Retire, add or update a task when the work evolves; preserve historical proof and require targeted refresh when current standards change. Reusing approved patterns may also limit unnecessary AI regeneration, but the primary benefit is a scalable, governed operating model.</p></div></section>
+<section data-glean-id="ask" id="ask">
+<div class="section-intro"><div class="rail">
+<p class="tag">THE ASK</p>
+<h2>Authorise one 90-day proof.</h2>
+<p class="crit" data-glean-id="crit-ask">ANSWERS · ADDITIONAL DETAILS · THE ASK<span class="anchor">#ask</span></p>
+</div><div class="body">
+<p><strong>Authorise one supervised 90-day proof for the AI Solution Seller role twin.</strong> Assign an executive sponsor, role experts, L&amp;D/product owner, participant cohort, target-role managers, bounded project supply, HR/Talent representative and access to approved baseline data.</p>
+<p>Confirm the Gate 3 validity policy — 6 months or 1 year — and the decision rights for simulation standards, project access, manager feedback, revalidation, privacy and appeal.</p>
+</div></div>
+<p class="ghead" data-glean-id="day-90-head">At day 90, Dell has<span class="gnote">Four connected proof assets from one role family and one governed pilot.</span></p>
+<div class="grid g4" data-glean-id="day-90">
+<div class="card green"><h3>A published Role Simulation Studio</h3><p>Current-to-target blueprint, complete role activities, tools, mixed scenario formats, evidence standards, Gate 1–3 rules and configured validity.</p></div>
+<div class="card green"><h3>A tested employee experience</h3><p>AI conversation, quote sandbox, workflow simulations, evidenced gap practice, AI coaching and continuous practice after validation.</p></div>
+<div class="card green"><h3>A proven manager and project loop</h3><p>Bounded project with the target-role team, recorded contribution, manager approval or returned gap, resubmission and evidence-backed badge.</p></div>
+<div class="card green"><h3>A Talent Intelligence and value decision</h3><p>Readiness cohorts, active/expired evidence, recurring gaps, project supply, fairness checks and a Dell-baselined scale, refine or stop recommendation.</p></div>
+</div>
+<div class="band" data-glean-id="closing-band">
+<p class="big">No employee should have to leave Dell to gain the experience Dell needs.</p>
+<p class="small">Build talent before the vacancy. Prove readiness before the need. Keep Dell people growing with Dell.</p>
+</div>
+</section>
+<section id="questions" data-glean-id="questions">
+<div class="section-intro"><div class="rail"><p class="tag amber">KEY QUESTIONS · CONDITIONS FOR SCALE</p><h2>What needs to be true for this to work at Dell.</h2><p class="crit">DELIVERY REALITY · BUSINESS DISCIPLINE · HUMAN DECISIONS</p></div><div class="body"><p class="lede"><strong>Talent Incubator should scale on evidence, operational ownership and a verified business case.</strong> The conditions below are explicit design and pilot requirements, not completed Dell approvals or achieved outcomes.</p></div></div>
+<div class="rows" data-glean-id="key-questions">
+<div class="obj"><div class="q">What if AI changes the target role while someone is preparing?</div><div class="a">The Role Simulation Studio maintains modular, versioned activities, scenarios, tools and evidence standards. Role experts update affected components and determine whether a material change requires focused refresh or Gate 3 revalidation; the shared framework remains reusable.</div></div>
+<div class="obj"><div class="q">What if activities disappear and new work emerges?</div><div class="a">Experts retire, revise or add role tasks and scenario variants. Historical evidence remains traceable to the role version that produced it; it is not silently treated as current proof when a relevant standard changes.</div></div>
+<div class="obj"><div class="q">How do we prevent readiness evidence becoming stale?</div><div class="a">Gate 3 validation is time-bound to the approved 6- or 12-month period. Active validation remains valid through normal ongoing practice; expired validation becomes historical until refreshed or revalidated. Material role-standard changes require a defined review policy.</div></div>
+<div class="obj"><div class="q">What if there are not enough real projects?</div><div class="a">The pilot must measure bounded project availability, required expert capacity, project acceptance and time to assignment. Gate 2 cannot substitute a fictional project for real-work evidence. If project supply is insufficient, expand gradually or refine project sourcing before scaling.</div></div>
+<div class="obj"><div class="q">How much work is needed to maintain a role twin?</div><div class="a">Name a role owner and review cadence. Updates should target changed tasks, tool patterns and approval criteria, not rebuild the full simulator. Capture expert maintenance hours, scenario refresh effort and outdated-content findings during the pilot.</div></div>
+<div class="obj"><div class="q">Can AI consumption stay economically disciplined as adoption grows?</div><div class="a">Use AI for adaptive conversations and coaching; use deterministic rules for fixed calculations and gates. Measure inference usage, cost per practice and participant, reviewer effort and full operating cost, then choose the appropriate delivery model based on actual pilot evidence. No token price or savings is assumed.</div></div>
+<div class="obj"><div class="q">What if a validated employee is not selected?</div><div class="a">An Evidence Passport establishes human-reviewed readiness for consideration, not a right to a vacancy or an automatic move. Normal selection, workforce capacity and manager decisions still apply; the employee retains documented development evidence.</div></div>
+<div class="obj"><div class="q">How are bias and AI ranking prevented?</div><div class="a">Role-relevant standards, inspectable evidence, permissions, correction rights and human review govern decisions. HR/Talent sees stage and evidence currency, not a ranked candidate list. Pilot testing must examine access differences and correction outcomes.</div></div>
+<div class="obj"><div class="q">How do we know the proposed value is real?</div><div class="a">Dell FY2026 financials and published external studies establish context, not programme outcomes. Annual value, hiring volumes, incremental mobility, retained talent, spend and payback are explicitly scenario-based. Dell Finance and Talent owners must replace placeholders and compare the pilot against an agreed baseline before any value claim.</div></div>
+<div class="obj"><div class="q">Is this just additional training expenditure?</div><div class="a">The defining output is task evidence transferred to manager-reviewed real work, not a course completion. The pilot measures capability, quality and actual operating cost, and proceeds only if the causal business value is credible.</div></div>
+<div class="obj"><div class="q">Does this remove the need for external hiring?</div><div class="a">No. External hiring remains necessary for net-new skills and capacity. Talent Incubator expands the visible internal supply of validated capability so build-versus-buy decisions are better informed.</div></div>
+<div class="obj"><div class="q">What if AI feedback or simulation evidence is wrong?</div><div class="a">Role experts own standards, review samples and correct failure patterns. Employees can inspect, contextualise and appeal evidence; the AI assistant provides coaching but cannot approve a project, Gate 3 or an employment action.</div></div>
+<div class="obj"><div class="q">How do we avoid double counting or transferring sales benchmarks globally?</div><div class="a">Four distinct monetised levers are modelled separately. Attribution and cohort overlap must be reviewed by Finance. The 70% ten-role-family scaling factor is a sensitivity assumption, not validation; every role family requires its own cost, ramp and feasibility baseline before economic benefits can be recognised.</div></div>
+</div></section>
+
+
+<section data-glean-id="sources" id="sources">
+<div class="section-intro"><div class="rail">
+<p class="tag">EVIDENCE BASE</p>
+<h2>What the numbers are built on.</h2>
+<p class="crit" data-glean-id="crit-sources">SUPPORTS · EVERY VALUE CLAIM IN THIS DOCUMENT<span class="anchor">#sources</span></p>
+</div><p class="sub">
+<strong>Evidence standard:</strong> every benchmark used in the business case is either <span class="hl">an official Dell source</span>, <span class="hl-blue">a published benchmark</span> or <span class="hl-blue">a named research source</span>. Illustrative model outputs are clearly separated from measured Dell results.
+</p></div>
+<div class="prototype-alignment-note"><span>PROTOTYPE V2 ALIGNMENT</span><p>The master proposal and prototype now describe the same operating model: three connected views, a complete current-to-target role twin, mixed simulation modalities, evidenced gap practice, AI coaching, human Gate 1–3 controls, target-role manager feedback, bounded real-project proof, continuous practice, 6/12-month readiness validity, active/expired passport states and permissioned HR/Talent intelligence.</p><p><strong>Boundary:</strong> the HarborGrid case, people, demand figures, project and results are synthetic. They demonstrate the workflow, not a deployed Dell system or achieved business outcome.</p></div><div class="source-grid">
+
+
+
+
+
+
+<a class="source-card" href="https://investors.delltechnologies.com/sec-filings/all-sec-filings/content/0001571996-26-000008/dell-20260130.htm" rel="noopener noreferrer" target="_blank"><strong>Dell FY2026 Form 10-K · 16 March 2026 ↗</strong><span>US$113.538B revenue; 20.0% gross margin (vs 22.2% FY2025); approximately 97,000 employees.</span></a><a class="source-card" href="https://www.sec.gov/Archives/edgar/data/1571996/000157199625000034/dell-20250131.htm" rel="noopener noreferrer" target="_blank"><strong>Dell FY2025 Form 10-K ↗</strong><span>Approximately 108,000 employees as of 31 January 2025; year-on-year comparison.</span></a><a class="source-card" href="https://investors.delltechnologies.com/news-events/press-releases/detail/93/dell-technologies-delivers-fourth-quarter-and-full-year-fiscal-2026-results" rel="noopener noreferrer" target="_blank"><strong>Dell FY2026 results release ↗</strong><span>FY2026 revenue growth of 19% versus the previous fiscal year.</span></a><a class="source-card" href="https://www.bridgegroupinc.com/research/2026-ae-models-motions-metrics" rel="noopener noreferrer" target="_blank"><strong>The Bridge Group · June 2026 · 158 B2B firms ↗</strong><span>Average Account Executive ramp of 6.2 months. External study, not Dell role-specific ramp.</span></a><a class="source-card" href="https://www.shrm.org/about/press-room/shrm-releases-2025-benchmarking-reports--how-does-your-organizat" rel="noopener noreferrer" target="_blank"><strong>SHRM · October 2025 · US recruiting benchmarking ↗</strong><span>Average cost per hire US$5,475 nonexecutive; US$35,879 executive.</span></a><a class="source-card" href="https://journals.sagepub.com/doi/abs/10.1177/0001839211433562" rel="noopener noreferrer" target="_blank"><strong>Bidwell · Administrative Science Quarterly · 2011 ↗</strong><span>External hires approximately 18% higher starting pay in the sampled US financial-services firm; not a Dell rate.</span></a><a class="source-card" href="https://www.gallup.com/workplace/247391/employee-turnover-costs-200-percent-salary.aspx" rel="noopener noreferrer" target="_blank"><strong>Gallup · March 2019 ↗</strong><span>Replacement-cost estimate of 50% to 200% of salary; broad US employer context.</span></a><a class="source-card" href="https://www.linkedin.com/business/talent/blog/talent-acquisition/how-internal-mobility-benefits-employers" rel="noopener noreferrer" target="_blank"><strong>LinkedIn · June 2024 ↗</strong><span>53% longer median tenure at high vs low internal mobility companies; observational relationship.</span></a></div><div class="evidence-method"><h3>Model method, assumptions and limitations</h3><p><strong>Dell facts:</strong> SEC-filed FY2026 net revenue, gross margin and employee count are reference context. The FY2025 Form 10-K supports the prior headcount. <strong>External benchmarks:</strong> role-ramp, external-hire salary premiums, tenure associations, replacement costs and cost-per-hire data come from their named original publishers. Different populations and years limit direct transfer to Dell.</p><p><strong>Scenario inputs:</strong> 120 roles, 35% internal fill, 45/55/65% scenarios, 2/3/4 months accelerated contribution, US$130,000 salary, 18% assumed premium, 500 participants, 1/2/3 percentage points avoided attrition, 75% replacement factor, US$12,000 recruiting spend, US$19,500 gross-margin-per-employee proxy, US$350,000 pilot cost and ten-family cost/efficiency assumptions are <strong>not Dell measurements</strong>. The corresponding arithmetic and formulas are fully presented under Business Impact → The Model.</p><p><strong>Validation requirement:</strong> a Finance-reviewed model must replace corporate productivity proxies, validate incremental contribution and cohort overlap, include full first-year and recurring costs and define a realistic benefits timetable. Modelled ratios are not audited returns or observed payback. The HarborGrid workflow and participants are synthetic proof-of-concept inputs. The contrast with traditional tools in the Innovation section is the proposed differentiation, not an independently completed market-wide survey of all existing solutions.</p></div>
+</section>
+<footer>
+<div>Talent Incubator · FY27 #AIWomen Hackathon, Asia-Pacific &amp; Japan · Master aligned to Simulator Prototype V2. Prototype data and financial outcomes remain synthetic or illustrative until validated through a governed Dell pilot.</div>
+</footer>
+</div>
+<script id="authorised-navigation-and-tooltip-fix">
+(function(){
+  const nav=document.querySelector('nav.toc');
+  const rail=nav&&nav.querySelector('.inner');
+  const links=rail?[...rail.querySelectorAll('a[href^="#"]')]:[];
+  const mainSections=[...document.querySelectorAll('body>.wrap>section[id]')];
+  const mapSubsection={whynow:'impact',value:'impact',model:'impact'};
+  let activeId='', userNavigating=false, scrollTick=false, tooltip=null, tipAnchor=null;
+  function navHeight(){return nav?Math.ceil(nav.getBoundingClientRect().height+14):88}
+  function syncOffset(){document.documentElement.style.setProperty('--active-nav-height',navHeight()+'px')}
+  function nearestSection(){
+    const at=window.scrollY+navHeight()+26;
+    let best=null;
+    for(const sec of mainSections){if(sec.offsetTop<=at)best=sec;else break;}
+    if(!best&&mainSections.length&&at>=mainSections[0].offsetTop)best=mainSections[0];
+    // At the bottom, always highlight the last visible section, even if short.
+    if(window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-8)best=mainSections[mainSections.length-1];
+    return best&&((mapSubsection[best.id])||best.id);
+  }
+  function reveal(link){
+    if(!rail||!link)return;
+    const currentLeft=rail.scrollLeft,brand=rail.querySelector('.nav-brand'),edge=(brand&&getComputedStyle(brand).display!=='none'?brand.getBoundingClientRect().width+22:14),goalStart=link.offsetLeft-rail.offsetLeft;
+    const itemStart=goalStart-currentLeft,itemEnd=itemStart+link.offsetWidth;
+    let target=null;
+    if(itemStart<edge)target=goalStart-edge;
+    else if(itemEnd>rail.clientWidth-edge)target=goalStart+link.offsetWidth-rail.clientWidth+edge;
+    if(target!==null)rail.scrollTo({left:Math.max(0,target),behavior:'auto'});
+  }
+  function mark(){
+    scrollTick=false;syncOffset();
+    const id=nearestSection();if(!id)return;
+    const current=links.find(a=>a.hash==='#'+id);
+    for(const a of links){a.toggleAttribute('aria-current',a===current);if(a===current)a.setAttribute('aria-current','true');}
+    if(id!==activeId){activeId=id;reveal(current)}
+  }
+  function scheduleMark(){if(!scrollTick){scrollTick=true;requestAnimationFrame(mark)}}
+  window.addEventListener('scroll',scheduleMark,{passive:true});
+  window.addEventListener('resize',()=>{syncOffset();scheduleMark();if(tipAnchor)positionTip(tipAnchor)},{passive:true});
+  links.forEach(a=>a.addEventListener('click',e=>{
+    const id=a.hash.slice(1),t=document.getElementById(id);if(!t)return;
+    e.preventDefault();history.replaceState(null,'','#'+id);
+    syncOffset();const dest=window.scrollY+t.getBoundingClientRect().top-navHeight();
+    window.scrollTo({top:Math.max(0,dest),behavior:'instant'});
+    scheduleMark();
+  }));
+  // Tooltips: viewport portal so cards and scroll tables cannot clip the explanatory source.
+  function closeTip(){if(tooltip){tooltip.remove();tooltip=null;}tipAnchor=null;}
+  function positionTip(anchor){if(!tooltip||!anchor)return;const b=anchor.getBoundingClientRect(),pad=12,available=window.innerWidth-2*pad;
+    tooltip.style.maxWidth=Math.min(340,available)+'px';tooltip.style.maxHeight=Math.max(80,Math.min(230,window.innerHeight-24))+'px';
+    tooltip.style.visibility='hidden';tooltip.style.left='0px';tooltip.style.top='0px';
+    const w=tooltip.offsetWidth,h=tooltip.offsetHeight;
+    const x=Math.min(Math.max(b.left+b.width/2-w/2,pad),window.innerWidth-w-pad);
+    const above=b.top-h-10,below=b.bottom+10;
+    const y=(above>=pad)?above:(below+h<=window.innerHeight-pad?below:Math.max(pad,Math.min(above,window.innerHeight-h-pad)));
+    tooltip.style.left=x+'px';tooltip.style.top=y+'px';tooltip.style.visibility='visible';
+  }
+  function openTip(anchor){const desc=anchor.querySelector('.tiptext');if(!desc)return;closeTip();tipAnchor=anchor;tooltip=document.createElement('div');tooltip.className='tooltip-portal';tooltip.id='active-financial-tooltip';tooltip.textContent=desc.textContent;tooltip.setAttribute('role','tooltip');document.body.appendChild(tooltip);anchor.setAttribute('aria-describedby','active-financial-tooltip');positionTip(anchor)}
+  document.querySelectorAll('.tip').forEach(anchor=>{
+    anchor.setAttribute('role','button');anchor.setAttribute('aria-label','Show explanation of this financial input');
+    anchor.addEventListener('mouseenter',()=>openTip(anchor));
+    anchor.addEventListener('focus',()=>openTip(anchor));
+    anchor.addEventListener('mouseleave',()=>{if(!anchor.matches(':focus'))closeTip()});
+    anchor.addEventListener('blur',()=>{anchor.removeAttribute('aria-describedby');closeTip()});
+    anchor.addEventListener('keydown',e=>{if(e.key==='Escape'){closeTip();anchor.blur()}if(e.key==='Enter'||e.key===' '){e.preventDefault();openTip(anchor)}});
+  });
+  document.addEventListener('scroll',()=>{if(tipAnchor)positionTip(tipAnchor)},true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeTip()});
+  syncOffset();mark();
+  if(location.hash){const dest=document.getElementById(location.hash.slice(1));if(dest){setTimeout(()=>{syncOffset();window.scrollTo(0,Math.max(0,window.scrollY+dest.getBoundingClientRect().top-navHeight()));mark()},0)}}
+  if(window.GleanBridge?.postMessage){try{window.GleanBridge.postMessage({actionId:'export-pdf',type:'glean-add-menu',metadata:{label:'Export as PDF',icon:'export'}});window.GleanBridge.onMessage?.('action',d=>{if(d.actionId==='export-pdf')window.print()})}catch(e){}}
+})();
+</script></body>
+</html>
